@@ -1,12 +1,3 @@
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v1
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: main.tex
-
-
 # This is the LaTeX workflow
 
 name: Build LaTeX document
