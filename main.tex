@@ -1,0 +1,312 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               _   _            
+%              | | | |           
+%          ___ | |_| |_ ___ _ __ 
+%         / _ \| __| __/ _ \ '__|
+%        | (_) | |_| ||  __/ |   
+%         \___/ \__|\__\___|_|   
+%
+%         .-"""-.
+%        /      o\
+%       |    o   0).-.
+%       |       .-;(_/     .-.
+%        \     /  /)).---._|  `\   ,
+%         '.  '  /((       `'-./ _/|
+%           \  .'  )        .-.;`  /
+%            '.             |  `\-'
+%              '._        -'    /
+%                 ``""--`------`
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%              Thesis-Dokumenten-Vorlage               %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% written in LaTeX with Overleaf
+% 
+% Author: Christian Bräunlich
+% Date: 01.06.2020
+% Organization: Hochschule Flensburg University of Applied Sciences 
+% 
+% -- MIT License
+%
+% Copyright (c) [2020] [Christian Bräunlich]
+% 
+% more Infos available in: LICENSE.txt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ***********************
+% Document Configuration
+% ***********************
+% Benötigte Packages -------------------------------------------------------
+%		Weitere Packages, die benötigt werden, sind in die Datei Packages.tex
+%		"ausgelagert", um die Vorlage möglichst übersichtlich zu halten.
+%
+% --------------------------------------------------------------------------
+%%%
+%%% Benutzer Einstellungen
+\input{config/01_UserPreferences.tex}
+%%%
+%%% Dokumenten Klasse
+\input{config/02_DocumentClass.tex}
+%%%
+%%% Paket-Import
+\input{config/00_Packages}
+%%%
+%%% Seiten Einstellungen
+\input{config/03_PageLayout}
+%%%
+%%% Chapter Style Einstellungen
+\input{config/09_ChapterStyle}
+%%%
+%%% PDF Einstellungen
+\input{config/04_PdfConfig}
+%%%
+%%% Absatz Einstellungen
+\input{config/06_ParagrahpConfig}
+%%%
+%%% Kopf- und Fußzeilen Einstellungen
+\input{config/050_HeaderAndFooter}
+%%%
+%%% Bibliotheken Klasse
+\input{config/08_Bibliography}
+%%%
+%%% Anhang Klasse
+\input{config/099_Appendix}
+
+%\usepackage{draftwatermark}
+%\usepackage[firstpage]{draftwatermark}
+%\SetWatermarkText{BIO-HAZARD}
+%\SetWatermarkLightness{0.5}
+%\SetWatermarkScale{4}
+
+% Abkürzungsverzeichnis & Glossar ------------------------------------------
+%
+%
+% Erstellung eines Index und Abkürzungsverzeichnisses aktivieren -----------
+%\makeindex
+%\makenomenclature
+%
+\usepackage[acronym]{glossaries}
+\makeglossaries
+%
+\input{pages/091_Glossary}
+\input{pages/092_Acronym}
+%
+% --------------------------------------------------------------------------
+
+\newcounter{blankpages}
+
+\makeatletter
+
+\def\cleardoubleoddstandardpage{%
+\clearpage
+\if@twoside \ifodd \c@page \else
+ \stepcounter{blankpages}%
+  \hbox {}\newpage \if@twocolumn \hbox {}\newpage \fi 
+\fi \fi }
+\makeatletter
+
+
+\renewcommand\thepage{\the\numexpr\value{page}-\value{blankpages}\relax}
+
+\usepackage{graphicx,eso-pic,lipsum,etoolbox}
+\providecommand{\chapterhook}{}
+\makeatletter
+\patchcmd{\scr@startchapter}{\thispagestyle}{\chapterhook\thispagestyle}{\typeout{Patching chapter worked OK!}}{\typeout{Patching chapter failed! Oh no!!}}
+\newcommand*{\chapterimage}[2][]{% \parthook[<options>]{<image>}
+  \renewcommand{\chapterhook}{% Update \parthook
+    \AddToShipoutPictureBG*{% Add picture to background of THIS page only
+      \AtPageLowerLeft{%
+        \includegraphics[width=\paperwidth,height=\paperheight,#1]{#2}%
+      }%
+    }% Insert image
+    \renewcommand{\chapterhook}{}% Restore \parthook
+  }%
+}
+\makeatother
+
+\usepackage{imakeidx}
+\makeindex[intoc, columns=2, title=Alphabetischer Index]
+
+% --------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%                     Dokument                     %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+%
+%
+%
+% Deckblatt ----------------------------------------------------------------
+%
+\input{pages/00_Titlepage}
+\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+% Eidesstattliche Erklärung ------------------------------------------------
+%		Die eidesstattliche Erklärung befindet sich in der 001_Affidavit.tex
+%
+%
+\input{pages/98_Affidavit}
+\newpage\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+\pagenumbering{roman}
+\setcounter{page}{1}
+%
+% Vorwort ------------------------------------------------------------------
+%		Hier steht das Vorwort des Dokuments
+%
+\input{pages/01_Vorwort}
+\newpage\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+% Abstract -----------------------------------------------------------------
+%		Hier steht das Abstract bzw. die Zusammenfassung des Dokuments
+%
+\input{pages/02_Abstract}
+\newpage\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+% Dankesagung --------------------------------------------------------------
+%		Hier steht die Dankesagung des Dokuments
+%
+\input{pages/03_Acknowledgement}
+\newpage\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+%
+% Inhaltsverzeichnis -------------------------------------------------------
+%
+%
+\input{config/07_ToC}
+%\thispagestyle{empty}                                  % disable numbering
+\addtocontents{toc}{\protect\thispagestyle{empty}}      % more then 1 page
+\renewcommand*{\tableofcontents}{\listoftoc[{\contentsname}]{toc}}% ToC under control of tocbasic
+\AfterTOCHead[toc]{\thispagestyle{empty}\pagestyle{empty}}
+\AfterStartingTOC[toc]{\clearpage}
+%
+\cleardoublepage
+\phantomsection
+%
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}     % Inhaltsverzeichnis zum Inhaltsverzeichnis hinzufügen
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\tableofcontents    % Inhaltsverzeichnis
+%
+%
+% --------------------------------------------------------------------------
+%
+% Abbildungsverzeichnis -------------------------------------------------------
+%
+%
+\renewcommand{\listfigurename}{Abbildungsverzeichnis}
+\listoffigures      % Abbildungsverzeichnis
+\pagenumbering{Roman}
+% --------------------------------------------------------------------------
+%
+% Tabellenverzeichnis ------------------------------------------------------
+%
+%
+\renewcommand{\listtablename}{Tabellenverzeichnis}
+\listoftables       % Tabellenverzeichnis
+% --------------------------------------------------------------------------
+%
+% Abkürzungsverzeichnis ----------------------------------------------------
+%
+%
+\clearpage
+\printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
+% --------------------------------------------------------------------------
+%
+% Glossar ------------------------------------------------------------------
+%
+%
+\printglossary[title=Glossar]
+\newpage\null\thispagestyle{empty}\newpage % Empty Page
+% --------------------------------------------------------------------------
+%
+% Listings-Verzeichnis -----------------------------------------------------
+%
+%
+%\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
+%\lstlistoflistings  % Listings-Verzeichnis
+% --------------------------------------------------------------------------
+%
+%
+%
+%
+% ...danach in normalen arabischen Ziffern ---------------------------------
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%
+%
+%
+% Inhalt -------------------------------------------------------------------
+%		Hier können jetzt die einzelnen Kapitel inkludiert werden. Sie müssen
+%		in den entsprechenden .TEX-Dateien vorliegen. Die Dateinamen können
+% 	    natürlich angepasst werden.
+%
+\input{content/01}
+\input{content/02}
+\input{content/03}
+\input{content/04}
+\input{content/05}
+\input{content/06}
+\input{content/07}
+\input{content/08}
+\input{content/09}
+% --------------------------------------------------------------------------
+%
+%
+\cleardoublepage
+\newpage
+\pagenumbering{Roman}
+%
+% Literaturverzeichnis -----------------------------------------------------
+%		Das Literaturverzeichnis wird aus der Datenbank Bibliographie.bib 
+% 	    erstellt. Die genaue Verwendung von bibtex wird hier jedoch nicht erklärt.
+%		Link: http://de.wikipedia.org/wiki/BibTeX
+%
+\bibliographystyle{plainnat}
+\bibliography{literature}
+% --------------------------------------------------------------------------
+
+% Anhang -------------------------------------------------------------------
+%		Die Inhalte des Anhangs werden analog zu den Kapiteln inkludiert.
+%		Dies geschieht in der Datei 002_Appendix.tex
+%
+\begin{appendix}
+\setcounter{page}{5}
+\input{pages/99_Appendix}
+\end{appendix}
+% --------------------------------------------------------------------------
+
+% Index --------------------------------------------------------------------
+%		Zum Erstellen eines Index, die folgende Zeile auskommentieren.
+%
+\printindex		% Index hier einfügen
+% --------------------------------------------------------------------------
+
+\end{document}
+% --------------------------------------------------------------------------
+%
+%          .----.__
+%         / c  ^  _`;
+%         |     .--'
+%          \   (
+%          /  -.\
+%         / .   \
+%        /  \    |
+%       ;    `-. `.
+%       |      /`'.`.
+%       |      |   \ \
+%       |    __|    `'
+%       ;   /   \
+%      ,'        |
+%     (_`'---._ /--,
+%       `'---._`'---..__
+%              `''''--, )
+%                _.-'`,`
+%                 ````
+%

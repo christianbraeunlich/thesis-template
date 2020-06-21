@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%                     Page-Layout                      %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% according to: 
+%
+% https://en.wikibooks.org/wiki/LaTeX/Page_Layout
+%
+% Seitenlayout -------------------------------------------------------------
+%		Ändert die Orientierung des Dokuments in einem bestimmten Bereich.
+%		
+% --------------------------------------------------------------------------
+\usepackage{setspace}
+\usepackage[
+	paper=a4paper,          % Change to letterpaper for US letter
+	inner=2.0cm,            % Inner margin
+	outer=2.0cm,            % Outer margin
+	bindingoffset=1.0cm,    % Binding offset
+	top=1.5cm,              % Top margin
+	bottom=1.5cm,           % Bottom margin
+	includeheadfoot,        % Kopf- und Fußzeile einbinden
+	footnotesep=2.0cm,      % Fußnoten Abstand
+    %headsep=2.0cm,          % Kopfzeilen Abstand
+	%showframe,             % Uncomment to show how the type block is set on the page
+	]{geometry}
+
+%\usepackage{showframe}      % zum Anzeigen des Seitenlayouts
+
+% A4 -----------------------------------------------------------------------
+%		DIN-A4 Papierformat Einstellungen
+%		
+% --------------------------------------------------------------------------
+\setlength{\paperheight}{29.7cm}
+\setlength{\paperwidth}{21.0cm}
+\setlength{\hoffset}{0.0cm}
+\setlength{\voffset}{0.0cm}
+%\setlength{\evensidemargin}{0.0cm}
+%\setlength{\oddsidemargin}{1.27cm}
+
+%\setlength{\marginparsep}{1.25cm}
+\setlength{\marginparwidth}{1.25cm}
+
+%\setlength{\topmargin}{0.00cm}
+%\setlength{\headheight}{0.25cm}
+%\setlength{\headsep}{0.25cm} %% Setting for gap in header and main body%%
+\setlength{\textheight}{24.0cm}
+%\setlength{\textwidth}{14.65cm}
+\setlength{\footskip}{1.5cm}
+
+% Zeilenabstand ------------------------------------------------------------
+\onehalfspacing
+
+% erzeugt ein wenig mehr Platz hinter einem Punkt --------------------------
+\frenchspacing 
+
+%----------------------------------------------------------------------------------------
+%	PENALTIES
+%----------------------------------------------------------------------------------------
+\doublehyphendemerits=10000     % No consecutive line hyphens
+\brokenpenalty=10000            % No broken words across columns/pages
+\widowpenalty=9999              % Almost no widows at bottom of page
+\clubpenalty=9999               % Almost no orphans at top of page
+\interfootnotelinepenalty=9999  % Almost never break footnotes
+
+% Quellcode-Ausgabe formatieren --------------------------------------------
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, breaklines=true}
+\lstset{emph={square}, emphstyle=\color{red}, emph={[2]root,base}, emphstyle={[2]\color{blue}}}
+
+% Fußnoten fortlaufend durchnummerieren ------------------------------------
+\counterwithout{footnote}{chapter}
+
+% Querformat einfügen ------------------------------------------------------
+%		Ändert die Orientierung des Dokuments in einem bestimmten Bereich.
+%		
+%\usepackage{pdflscape}
+%\begin{landscape}
+%\begin{table}
+%\centering     % optional, probably makes it look better to have it centered on the page
+%\begin{tabular}{....}
+% ...
+%\end{tabular}
+%\end{table}
+%\end{landscape}
+% --------------------------------------------------------------------------

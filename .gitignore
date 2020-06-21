@@ -1,0 +1,23 @@
+### OtterWhisperer-LaTeX .gitignore file
+# macOS
+.DS_Store
+
+# useful files
+main.pdf
+
+# compiler files
+.log
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.lol
+*.out
+*.toc
+*.bak
+*.synctex.gz

@@ -1,0 +1,31 @@
+% Table of Contents --------------------------------------------------------
+%		Das Inhaltsverzeichnis in all seiner Pracht.
+%
+% --------------------------------------------------------------------------
+
+\setcounter{secnumdepth}{4}         % Tiefe der Nummerierung der Kapitel
+\setcounter{tocdepth}{3}            % Tiefe des Inhaltsverzeichnis
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{7.0em}{4.1em}}
+\renewcommand*\l@paragraph{\@dottedtocline{4}{10em}{5em}}
+\renewcommand*\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
+\makeatother
+
+%\RedeclareSectionCommand[style=section, beforeskip=-3.5ex plus -1ex minus -.2ex, afterskip=2.3ex plus.2ex,
+%   font=\normalfont\LARGE\bfseries, indent=0pt, tocindent=0em, tocnumwidth=1.5em]{part}
+ 
+%\RedeclareSectionCommand[tocindent=1em, tocnumwidth=1em]{chapter}
+%\RedeclareSectionCommand[tocindent=1em, tocnumwidth=2em]{section}
+%\RedeclareSectionCommand[tocindent=2em, tocnumwidth=1.5em]{subsection}
+%\RedeclareSectionCommand[tocindent=3em, tocnumwidth=1.5em]{subsubsection}
+ 
+%\DeclareSectionCommand[level=4,style=section,
+%   beforeskip=-3.25ex plus -1ex minus -.2ex, afterskip=1.5ex plus .2ex,
+%   font=\normalfont\normalsize\bfseries, counterwithin=subsubsection,
+%   indent=0pt,tocindent=4em, tocnumwidth=1.5em]{subsubsubsection}
+
+
+

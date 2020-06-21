@@ -1,0 +1,70 @@
+%\pdfcompresslevel=9
+
+%% PDF-Optionen -------------------------------------------------------------
+\usepackage[
+extension=pdf,
+pdflang={de},
+pdftitle={\titlename},
+pdfauthor={\authorname},
+pdfcreator={\authorname},
+pdfsubject={\titlename},
+pdfkeywords={\keywords},
+linktoc=all,
+bookmarks,                      % Lesezeichen beim Betrachten anzeigen
+bookmarksopen=true,             % alle Lesezeichen ausklappen
+bookmarksopenlevel=1,           % Festlegen der Tiefe der Bookmarks
+%bookmarksnumbered,              % Abschnittsnummer anzeigen
+%pdfpagelabels,                  % zur korrekten Erstellung der Bookmarks
+%plainpages,                     % zur korrekten Erstellung der Bookmarks
+%
+%backref,                        % Fügt im Literaturverzeichnis einen Rücksprungspunkt ein
+%backref=section,                % ???
+%backref=slide,                  % ??? 
+%
+%pdfmenubar,                     % Acrobat’s Menüleiste
+%pdftoolbar,                     % Anzeigen der Acrobat’s Werkzeugleiste
+%pdffitwindow,                   % Resize document to fit document size
+%pdfnewwindow=true,              % links in new PDF window
+%pdfpagelabels,                  % ???
+%pdfpagelayout=TwoPageRight,
+%pdfpagemode=UseThumbs,
+%pdfview=Fit,
+pdfview={XYZ null null 1},
+%pdfstartview=Fit,
+%pagebackref,                    % ???
+%
+%colorlinks,                     % false: boxed links; true: colored links
+%linktocpage,                     % Seitenzahlen anstatt Text im Inhaltsverzeichnis verlinken
+%linkcolor=red,                  % color of internal links (change box color with linkbordercolor)
+%linkbordercolor={1 0 0},        % color of frame around internal links (if colorlinks=false)
+%citecolor=green,                % color of links to bibliography
+%citebordercolor={1 0 0},        % color of frame around citations
+%urlcolor=cyan,                  % color of external links
+%urlbordercolor={1 0 0}          % color of frame around URL links
+%
+%filecolor=magenta,              % color of file links
+%menucolor=red,                  % Farbe der Acrobat-Menüpunkte
+%
+%pdfborderstyle={/S/U/W 1},
+%pdfborder={6 6 6},
+%anchorcolor=black,% Ankertext
+%hypertexnames=false            % zur korrekten Erstellung der Bookmarks
+]{hyperref}
+
+\usepackage{etoolbox}
+
+\makeatletter
+\pretocmd{\contentsline}
+  {\patchcmd{\cftdotfill}
+     {\leaders}
+     {\hyper@linkstart{link}{#4}\leaders}
+     {}
+     {}%
+   \patchcmd{\cftdotfill}
+     {\hfill}
+     {\hfill\hyper@linkend}
+     {}
+     {}}
+  {}
+  {}
+\makeatother

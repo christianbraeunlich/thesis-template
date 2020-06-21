@@ -1,0 +1,247 @@
+% **** Testing Packages **************************************
+% 		- Definition of global Parameters.
+%
+% *************************************************************
+
+\usepackage{lipsum}
+% \lipsum
+% \lipsum[3-56]
+
+
+% **** User-Informations **************************************
+% 		- Definition of global Parameters.
+%
+% *************************************************************
+
+% Umlaute ------------------------------------------------------------------
+% 	Umlaute/Sonderzeichen wie äüöß direkt im Quelltext verwenden (CodePage).
+%		Erlaubt automatische Trennung von Worten mit Umlauten.
+% --------------------------------------------------------------------------
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{ae} % "schöneres" ß
+\usepackage{textcomp} % Euro-Zeichen etc.
+
+% Anpassung an Landessprache -----------------------------------------------
+% 	Verwendet globale Option german siehe \documentclass
+% --------------------------------------------------------------------------
+\usepackage{babel}
+
+
+\usepackage{emptypage}
+
+
+\usepackage{tocbasic}
+
+% Quotation Package
+\usepackage{csquotes}
+
+% Bessere Unterstreichungen ---------------------------------------------
+\usepackage[normalem]{ulem}
+
+
+% Abkürzungsverzeichnis
+\usepackage[acronym, toc]{glossaries}
+\makeglossaries
+
+% Grafiken -----------------------------------------------------------------
+% 	Einbinden von EPS-Grafiken [draft oder final]
+% 	Option [draft] bindet Bilder nicht ein - auch globale Option
+% --------------------------------------------------------------------------
+\usepackage[dvips,final]{graphicx}
+\graphicspath{{media/}} % Dort liegen die Bilder des Dokuments
+
+% Befehle aus AMSTeX für mathematische Symbole z.B. \boldsymbol \mathbb ----
+\usepackage{amsmath,amsfonts}
+
+%
+% Zeilenumbruch bei Bildbeschreibungen
+%
+\setcapindent{1em}
+
+% Für Index-Ausgabe; \printindex -------------------------------------------
+\usepackage{makeidx}
+
+% Symbolverzeichnis --------------------------------------------------------
+% 	Symbolverzeichnisse bequem erstellen, beruht auf MakeIndex.
+% 		makeindex.exe %Name%.nlo -s nomencl.ist -o %Name%.nls
+% 	erzeugt dann das Verzeichnis. Dieser Befehl kann z.B. im TeXnicCenter
+%		als Postprozessor eingetragen werden, damit er nicht ständig manuell
+%		ausgeführt werden muss.
+%		Die Definitionen sind ausgegliedert in die Datei Abkuerzungen.tex.
+% --------------------------------------------------------------------------
+\usepackage[intoc]{nomencl}
+  \let\abbrev\nomenclature
+  \renewcommand{\nomname}{Abkürzungsverzeichnis}
+  \setlength{\nomlabelwidth}{.25\hsize}
+  \renewcommand{\nomlabel}[1]{#1 \dotfill}
+  \setlength{\nomitemsep}{-\parsep}
+
+% zum Umfließen von Bildern ---------------------------------------------------------
+\usepackage[vflt]{floatflt}
+\usepackage{subfigure}
+
+% Zum Einbinden von Programmcode --------------------------------------------
+\usepackage{listings}
+\usepackage{xcolor} 
+\definecolor{hellgelb}{rgb}{1,1,0.9}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\lstset{%
+    float=hbp,%
+    basicstyle=\texttt\small, %
+    identifierstyle=\color{colIdentifier}, %
+    keywordstyle=\color{colKeys}, %
+    stringstyle=\color{colString}, %
+    commentstyle=\color{colComments}, %
+    columns=flexible, %
+    tabsize=2, %
+    frame=single, %
+    extendedchars=true, %
+    showspaces=false, %
+    showstringspaces=false, %
+    numbers=left, %
+    numberstyle=\tiny, %
+    breaklines=true, %
+    backgroundcolor=\color{hellgelb}, %
+    breakautoindent=true, %
+%    captionpos=b%
+}
+
+% Lange URLs umbrechen etc. -------------------------------------------------
+\usepackage{url}
+
+%\usepackage{jurabib}
+%\jurabibsetup{authorformat=smallcaps,% Autor in Kapitälchen              
+%              %authorformat=year,
+%              authorformat=citationreversed,% Im Zitat Vorname vorne
+%              authorformat=indexed,% Autor in Index
+%              authorformat=and,% Autoren mit "," und "und" abgetrennt
+%              authorformat=firstnotreversed,%
+%              authorformat=reducedifibidem,% Bei Verweis nur Nachname. 
+%              %superscriptedition=all,% Auflage hochgestellt
+%              %citefull=first,% Erstzitat voll
+%              titleformat=italic,              
+%              titleformat=all,
+%              titleformat=colonsep,% Doppelpunkt zwischen Aut. u. Titel
+%              ibidem=strict,% Ebenda pro Doppelseite
+%              see,% Das zweite Argument ist optional für "Vgl." etc.
+%              commabeforerest,% Komma vor Seitenzahl
+%              %howcited=compare,%
+%              %bibformat=ibidem,% Strich bei widerholtem Autor in BIB.
+%              commabeforerest,
+%              bibformat=compress,
+%              pages=always,
+%              %pages=format,% S. wird vorweggesetzt
+%              crossref=long,% Querverweise in voller Länge
+%              square,% eckige Klammern bei Zitaten
+%              %oxford,
+%              %chicago,
+%}
+%
+%\AddTo\bibsgerman{% 
+%\jblookforgender%
+%\renewcommand*{\ibidemname}{Ebenda}%
+%\renewcommand*{\ibidemmidname}{ebenda}% 
+%\renewcommand*{\bibjtsep}{In: }% Vor Zeitschriften 
+%\renewcommand*{\bibbtsep}{In: }% Vor Buchtitel
+%\renewcommand*{\incollinname}{In: }%Nicht so ganz sauber. 
+%\renewcommand*{\bibatsep}{.}% Nach Titel
+%\renewcommand*{\bibbdsep}{}%Vor Datum 
+%\renewcommand*{\jbaensep}{.}%
+%\renewcommand*{\bibprdelim}{)}% Klammer bei Zeitschriftjahr rechts
+%\renewcommand*{\bibpldelim}{(}% Klammer bei Zeitschriftjahr links
+%\renewcommand*{\biblnfont}{\textsc}% Nachamen Autor im BIB
+%\renewcommand*{\bibelnfont}{\textsc}% Nachamen Hg. im BIB
+%\renewcommand*{\bibfnfont}{\textsc}% Vorn. Autor im BIB
+%\renewcommand*{\bibefnfont}{\textsc}% Vorn. Hg. im BIB
+%\renewcommand*{\jbcitationyearformat}[1]{#1}% Komma zwischen Autor und Jahr entfernen
+%\def\herename{hier: }%
+%\jbfirstcitepageranges% Format: S. x--z, hier y.  
+%\renewcommand\bibidemSfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidemsfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidemPfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidempfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidemSmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidemsmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidemPmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\bibidempmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
+%\renewcommand\idemSfname{Dies.}%
+%\renewcommand\idemsfname{dies.}%
+%\renewcommand\idemPfname{Dies.}%
+%\renewcommand\idempfname{dies.}%
+%\renewcommand\idemSmname{Ders.}%
+%\renewcommand\idemsmname{ders.}%
+%\renewcommand\idemPmname{Dies.}%
+%\renewcommand\idempmname{dies.}%
+%\renewcommand{\jbannoteformat}[1]{{\footnotesize\begin{quote}#1\end{quote}}}
+%}%
+
+% Paket zum sauberen Einbauen von externen PDF-Dateien -----------------
+\usepackage[final]{pdfpages}
+
+% Zum fortlaufenden Durchnummerieren der Fußnoten ---------------------------
+\usepackage{chngcntr}
+
+% Aliase für Zitate
+% \defcitealias{WPProzess}{Wikipedia:~Prozess}
+
+%\usepackage{minitoc}
+
+% Beschriftung von Tabellen und Bildern ändern ----------------------------------------------------------
+\addto\captionsngerman{
+	\renewcommand{\figurename}{Abb.}
+	\renewcommand{\tablename}{Tab.}
+}
+
+% Rotation von Elementen -------------------------------------------------------
+\usepackage{rotating}
+
+% für lange Tabellen
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{lscape}
+
+%Spaltendefinition rechtsbündig mit definierter Breite
+\newcolumntype{z}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+
+% Formatierung von Listen ändern
+\usepackage{paralist}
+% \setdefaultleftmargin{2.5em}{2.2em}{1.87em}{1.7em}{1em}{1em}
+
+% Anhangsverzeichnis
+%\makeatletter% --> De-TeX-FAQ
+%\newcommand*{\maintoc}{% Hauptinhaltsverzeichnis
+%\begingroup
+%\@fileswfalse% kein neues Verzeichnis öffnen
+%\renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+%\value{tocdepth}=-10000 % lokal tocdepth auf sehr kleinen Wert setzen
+%}%
+%\tableofcontents% Verzeichnis ausgeben
+%\endgroup
+%}
+%\newcommand*{\appendixtoc}{% Anhangsinhaltsverzeichnis
+%\begingroup
+%\edef\@alltocdepth{\the\value{tocdepth}}% tocdepth merken
+%\setcounter{tocdepth}{-10000}% Keine Verzeichniseinträge
+%\renewcommand*{\contentsname}{% Verzeichnisname ändern
+%Verzeichnis der Anh\"ange}%
+%\renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+%\setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
+%}%
+%\tableofcontents% Verzeichnis ausgeben
+%\setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
+%\endgroup
+%}
+%\newcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+%}
+%\g@addto@macro\appendix{% \appendix erweitern
+%\if@openright\cleardoublepage\else\clearpage\fi% Neue Seite
+%\addcontentsline{toc}{chapter}{\appendixname}% Eintrag ins Hauptverzeichnis
+%\addtocontents{toc}{\protect\appendixattoc}% Trennanweisung in die toc-Datei
+%}
+%\makeatother

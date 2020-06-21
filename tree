@@ -1,0 +1,11 @@
+# LaTeX 
+
+    root
+    ├── config
+    ├── dir2
+    │   └── file1
+    ├── content
+    │   ├── file2
+    │   └── dir4
+    │       └── file4
+    └── pages
