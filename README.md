@@ -10,10 +10,20 @@
 
 
 
+## Project folder structure
+
+    root
+    ├── config
+    ├── content
+    │   └── file1
+    ├── media
+    │   ├── file2
+    │   └── dir4
+    │       └── file4
+    └── pages
 
 
 ## Acknowledgment
-
 
 
 ## Contribute to this template
