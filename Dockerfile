@@ -1,9 +1,8 @@
-FROM xucheng/texlive-full:latest
+# Container image that runs your code
+FROM vinay0410/tectonic-image:latest
 
-COPY \
-  LICENSE \
-  README.md \
-  entrypoint.sh \
-  /root/
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/root/entrypoint.sh"]
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+ENTRYPOINT ["/entrypoint.sh"]
