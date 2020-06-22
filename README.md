@@ -19,14 +19,24 @@
     <a href="https://github.com/otterwhisperer/thesis-template/releases" target="_blank">
         <img src="https://img.shields.io/github/tag/otterwhisperer/thesis-template.svg" alt="GitHub tag (latest SemVer)">
     </a>
-    <a href="https://github.com/otterwhisperer/thesis-template/actions" target="_blank">
-        <img src="https://img.shields.io/github/workflow/status/otterwhisperer/thesis-template/Test%20application/master.svg?label=github-actions" alt="GitHub actions status">
+    <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
+        <img src="https://img.shields.io/github/downloads/otterwhisperer/thesis-template/total.svg" alt="GitHub downloads">
+    </a>
+    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
+        <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
     </a>
     <a href="https://github.com/otterwhisperer/thesis-template/commits/master" target="_blank">
         <img src="https://img.shields.io/github/commit-activity/y/otterwhisperer/thesis-template.svg" alt="GitHub commit activity">
     </a>
+    <a href="https://github.com/otterwhisperer/thesis-template/" target="_blank">
+        <img src="https://img.shields.io/github/repo-size/otterwhisperer/thesis-template?label=size&style=plastic.svg" alt="GitHub repository size">
+    </a>
     <a href="https://github.com/otterwhisperer/thesis-template/graphs/contributors" target="_blank">
         <img src="https://img.shields.io/github/contributors-anon/otterwhisperer/thesis-template.svg" alt="GitHub contributors">
+    </a>
+    </a>
+    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
+        <img src="https://img.shields.io/docker/image-size/otterwhisperer/thesis-template/latest.svg" alt="GitHub contributors">
     </a>
     <a>
         <img src="https://img.shields.io/badge/-template-blue.svg" alt="template">
@@ -38,22 +48,52 @@
 
 > dedicated to all clumsy otter's out there...
 
-## Goal of this project
+## <a> &#129446; </a> Goal of this project
+
+OTTER: U+1F9A6
+
+:page_facing_up:
+
+:open_book:
 
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
+<<<<<<< HEAD
 ## Project folder structure
+=======
+## :books: Guide
+
+A simple guide to make sure you quickly understand how to use this template... Let's Go!
+
+
+### Project folder structure
+>>>>>>> b95ba7aab7b579f85128cc1fdfd1e0b8ed64ecf4
 
     root
     ├── config
+    |   ├── 00_Packages.tex
+    |   ├── 01_DocumentClass.tex
+    |   ├── 02_PageLayout.tex
+    |   ├── 03_PdfConfig.tex
+    |   ├── 04_TableOfContents.tex
+    │   └── 05_HeaderAndFooter.tex
     ├── content
-    │   └── file1
+    |   ├── chapter1.tex    
+    │   └── chapter2.tex
     ├── media
-    │   ├── file2
-    │   └── dir4
-    │       └── file4
+    │   └── logo.png
     └── pages
+        ├── 00_Titlepage.tex
+        ├── 01_Vorwort.tex
+        ├── 02_Abstract.tex        
+        └── 03_Acknowledgement.tex    
 
+### Useful tools
+
+| TeX-Editor            |        Platform       | Difficulty        |
+| :---                  |         :---:         |              ---: |
+| `TeXstudio`           | Linux, Windows, macOS | easy              |
+| `Visual Studio Code`  | Linux, Windows, macOS | medium            |
 
 ## Acknowledgment
 
