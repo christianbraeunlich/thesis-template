@@ -40,6 +40,8 @@
 
 ## <a> &#129446; </a> Goal of this project
 
+OTTER: U+1F9A6
+
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
 ## Project folder structure
