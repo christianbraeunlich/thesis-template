@@ -42,7 +42,7 @@
 
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
-
+<a> &#129446; </a>
 
 ## Project folder structure
 
