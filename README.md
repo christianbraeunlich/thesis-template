@@ -25,11 +25,21 @@
     <a href="https://github.com/otterwhisperer/thesis-template/actions" target="_blank">
         <img src="https://img.shields.io/github/workflow/status/otterwhisperer/thesis-template/Test%20application/master.svg?label=github-actions" alt="GitHub actions status">
     </a>
+    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
+        <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
+    </a>
     <a href="https://github.com/otterwhisperer/thesis-template/commits/master" target="_blank">
         <img src="https://img.shields.io/github/commit-activity/y/otterwhisperer/thesis-template.svg" alt="GitHub commit activity">
     </a>
+    <a href="https://github.com/otterwhisperer/thesis-template/" target="_blank">
+        <img src="https://img.shields.io/github/repo-size/otterwhisperer/thesis-template?label=size&style=plastic.svg" alt="GitHub repository size">
+    </a>
     <a href="https://github.com/otterwhisperer/thesis-template/graphs/contributors" target="_blank">
         <img src="https://img.shields.io/github/contributors-anon/otterwhisperer/thesis-template.svg" alt="GitHub contributors">
+    </a>
+    </a>
+    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
+        <img src="https://img.shields.io/docker/image-size/otterwhisperer/thesis-template/latest.svg" alt="GitHub contributors">
     </a>
     <a>
         <img src="https://img.shields.io/badge/-template-blue.svg" alt="template">
