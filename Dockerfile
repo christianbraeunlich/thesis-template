@@ -1,5 +1,9 @@
-# Container image that runs your code
-FROM vinay0410/tectonic-image:latest
+# ./Dockerfile
+
+# Container base image that runs your code
+FROM alpine:latest
+
+LABEL authors="OtterWhisperer"
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
