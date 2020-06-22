@@ -128,6 +128,13 @@
 \usepackage{imakeidx}
 \makeindex[intoc, columns=2, title=Alphabetischer Index]
 
+\makeatletter
+    \let\@internalcite\cite
+    \def\cite{\def\citeauthoryear##1##2{##1, ##2}\@internalcite}
+    \def\shortcite{\def\citeauthoryear##1{##2}\@internalcite}
+    \def\@biblabel#1{\def\citeauthoryear##1##2{##1, ##2}[#1]\hfill}
+\makeatother
+
 % --------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%                     Dokument                     %%%%%%%%%%%%%
@@ -254,8 +261,6 @@
 \input{content/05}
 \input{content/06}
 \input{content/07}
-\input{content/08}
-\input{content/09}
 % --------------------------------------------------------------------------
 %
 %
@@ -268,8 +273,8 @@
 % 	    erstellt. Die genaue Verwendung von bibtex wird hier jedoch nicht erklärt.
 %		Link: http://de.wikipedia.org/wiki/BibTeX
 %
-\bibliographystyle{plainnat}
-\bibliography{literature}
+%\bibliographystyle{plainnat}
+%\bibliography{literature}
 % --------------------------------------------------------------------------
 
 % Anhang -------------------------------------------------------------------

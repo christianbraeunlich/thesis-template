@@ -1,17 +1,38 @@
-<<<<<<< HEAD
-# Container image that runs your code
-FROM otterwhisperer/thesis-template:latest
-=======
 # ./Dockerfile
 
-# Container base image that runs your code
-FROM alpine:latest
+# Arguments
+ARG UBUNTU_VERSION=18.04
 
-LABEL authors="OtterWhisperer"
->>>>>>> d3c1d9c16461c271cc1be7f161a40c7a510a5baf
+# Container base image that runs the code
+FROM ubuntu:${UBUNTU_VERSION}
+
+# Environment variables
+ENV WORKING_DIR /app
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Maintainer(s)
+LABEL maintainer="sundowneffect@gmail.com"
+
+# Create working directory
+RUN mkdir ${WORKING_DIR}
+
+# In the future:
+# Offline Overleaf: https://github.com/overleaf/overleaf
+
+# Run installation process
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
+        apt-utils \
+    && apt-get install -y \
+        texlive \
+        texlive-latex-extra \
+        texlive-bibtex-extra \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
+COPY . ${WORKING_DIR}
+WORKDIR ${WORKING_DIR}
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+CMD pdflatex -synctex=1 -interaction=nonstopmode ${WORKING_DIR}/main.tex
