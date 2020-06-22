@@ -84,6 +84,23 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ### :books: Bibliography
 
+    @article{Johann2017,
+        abstract = {A main advantage of app stores is that they aggregate important information created by ...},
+        author = {Johann, Timo and Stanik, Christoph and Alizadeh, Alireza M.B. and Maalej, Walid},
+        doi = {10.1109/RE.2017.71},
+        file = {:home/otter/.var/app/com.elsevier.MendeleyDesktop/data/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Johann et al. - 2017 - SAFE A Simple Approach for Feature Extraction from App Descriptions and App Reviews.pdf:pdf},
+        isbn = {9781538631911},
+        journal = {Proceedings - 2017 IEEE 25th International Requirements Engineering Conference, RE 2017},
+        keywords = {App Store Analytics,Data Mining,Data-Driven Requirements,Software Feature,User Reviews},
+        mendeley-groups = {Feature Extraction},
+        pages = {21--30},
+        publisher = {IEEE},
+        title = {{SAFE: A Simple Approach for Feature Extraction from App Descriptions and App Reviews}},
+        year = {2017}
+    }
+
+
+
 ### Useful tools
 
 | TeX-Editor            |        Platform       | Difficulty        |
