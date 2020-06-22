@@ -42,6 +42,8 @@
 
 OTTER: U+1F9A6
 
+:page_facing_up:
+
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
 ## Project folder structure
