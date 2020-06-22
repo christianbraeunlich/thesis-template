@@ -86,7 +86,8 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 
 **Citation**
-   \cite{Johann2017} 
+
+    \cite{Johann2017} 
 
 **BibTeX-Entry**
 
