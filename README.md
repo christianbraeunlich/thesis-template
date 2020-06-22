@@ -52,15 +52,11 @@
 
 OTTER: U+1F9A6
 
-:page_facing_up:
-
-:open_book:
-
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
-## Project folder structure
+## :open_book: Project folder structure
 
-## :books: Guide
+## :page_facing_up: Guide
 
 A simple guide to make sure you quickly understand how to use this template... Let's Go!
 
@@ -85,6 +81,8 @@ A simple guide to make sure you quickly understand how to use this template... L
         ├── 01_Vorwort.tex
         ├── 02_Abstract.tex        
         └── 03_Acknowledgement.tex    
+
+### :books: Bibliography
 
 ### Useful tools
 
