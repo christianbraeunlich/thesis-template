@@ -44,22 +44,21 @@
 </p>
 <br/>
 
+<a> Thesis Template written in LaTeX
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100">
+</a>
+
 # Thesis Template written in LaTeX
 
 > dedicated to all clumsy otter's out there...
 
-## <a> &#129446; </a> Goal of this project
-
-OTTER: U+1F9A6
+## :otter: Goal of this project
 
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
-
 
 ## :page_facing_up: Guide
 
 A simple guide to make sure you quickly understand how to use this template... Let's Go!
-
-
 
 ### :open_book: Project folder structure
 
@@ -84,7 +83,6 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ### :books: Bibliography
 
-
 **Citation**
 
     \cite{Johann2017} 
@@ -106,7 +104,6 @@ A simple guide to make sure you quickly understand how to use this template... L
         year = {2017}
     }
 
-
 ### Useful tools
 
 | TeX-Editor            |        Platform       | Difficulty        |
@@ -116,6 +113,9 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ## Acknowledgment
 
+    Special thanks to:
+    - Adrian
+    - Kai
 
 ## ❤️ Community and Contributions
 
