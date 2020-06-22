@@ -5,6 +5,8 @@ name: Build LaTeX document
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  release:
+    types: [published]
   push:
     branches: [ master ]
   pull_request:
@@ -27,4 +29,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag thesis-template:$(date +%s)
+      run: docker build . --file Dockerfile --tag thesis-template:latest
