@@ -44,21 +44,37 @@ OTTER: U+1F9A6
 
 :page_facing_up:
 
+:open_book:
+
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
-## Project folder structure
+## :books: Guide
+
+A simple guide to make sure you quickly understand how to use this template... Let's Go!
+
+
+### Project folder structure
 
     root
     ├── config
+    |   ├── 00_Packages.tex
+    |   ├── 01_DocumentClass.tex
+    |   ├── 02_PageLayout.tex
+    |   ├── 03_PdfConfig.tex
+    |   ├── 04_TableOfContents.tex
+    │   └── 05_HeaderAndFooter.tex
     ├── content
-    │   └── file1
+    |   ├── chapter1.tex    
+    │   └── chapter2.tex
     ├── media
-    │   ├── file2
-    │   └── dir4
-    │       └── file4
+    │   └── logo.png
     └── pages
+        ├── 00_Titlepage.tex
+        ├── 01_Vorwort.tex
+        ├── 02_Abstract.tex        
+        └── 03_Acknowledgement.tex    
 
-## Useful tools
+### Useful tools
 
 | TeX-Editor            |        Platform       | Difficulty        |
 | :---                  |         :---:         |              ---: |
