@@ -56,6 +56,12 @@ OTTER: U+1F9A6
     │       └── file4
     └── pages
 
+## Useful tools
+
+| TeX-Editor            |        Platform       | Difficulty        |
+| :---                  |         :---:         |              ---: |
+| `TeXstudio`           | Linux, Windows, macOS | easy              |
+| `Visual Studio Code`  | Linux, Windows, macOS | medium            |
 
 ## Acknowledgment
 
