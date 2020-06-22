@@ -84,6 +84,11 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ### :books: Bibliography
 
+
+**Citation**
+   \cite{Johann2017} 
+
+**BibTeX-Entry**
     @article{Johann2017,
         abstract = {A main advantage of app stores is that they aggregate important information created by ...},
         author = {Johann, Timo and Stanik, Christoph and Alizadeh, Alireza M.B. and Maalej, Walid},
