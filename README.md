@@ -22,9 +22,6 @@
     <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/github/downloads/otterwhisperer/thesis-template/total.svg" alt="GitHub downloads">
     </a>
-    <a href="https://github.com/otterwhisperer/thesis-template/actions" target="_blank">
-        <img src="https://img.shields.io/github/workflow/status/otterwhisperer/thesis-template/Test%20application/master.svg?label=github-actions" alt="GitHub actions status">
-    </a>
     <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
     </a>
