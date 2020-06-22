@@ -10,10 +10,10 @@
     <a href="https://github.com/otterwhisperer/thesis-template/blob/master/LICENSE" target="_blank">
         <img src="https://img.shields.io/github/license/otterwhisperer/thesis-template.svg" alt="GitHub license">
     </a>
-    <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
+    <a href="https://github.com/OtterWhisperer/thesis-template/stargazers" target="_blank">
         <img src="https://img.shields.io/github/stars/otterwhisperer/thesis-template.svg" alt="GitHub stars">
     </a>
-    <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
+    <a href="https://github.com/OtterWhisperer/thesis-template/network/members" target="_blank">
         <img src="https://img.shields.io/github/forks/otterwhisperer/thesis-template.svg" alt="GitHub forks">
     </a>
     <a href="https://github.com/otterwhisperer/thesis-template/releases" target="_blank">
