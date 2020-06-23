@@ -44,12 +44,23 @@
 </p>
 <br/>
 
-<p align="center">
-    <a><FONT SIZE="5"> Thesis Template written in LaTeX</FONT>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100">
-    </a>
-</p>
-# Thesis Template written in LaTeX
+<div align="center">
+    <table style="align: center; width: 100%;>
+     <tr>
+        <th>
+            <img src="media/logo.jpg" height="150" width="150" alt="" style="float:left;" />Text
+        </th>
+        <th>
+            <header>
+                <h1 style="color:orange;font-size:200%;vertical-align:middle">Thesis Template written in</h1>
+            </header>
+        </th>
+        <th>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100" alt="" style="float:right;">
+        </th>
+      </tr>
+    </table>
+</div>
 
 > dedicated to all clumsy otter's out there...
 
