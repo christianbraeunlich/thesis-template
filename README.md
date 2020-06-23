@@ -46,6 +46,7 @@
 
 # Thesis Template written in LaTeX
 
+> focus on what matters MOST . . .
 > dedicated to all clumsy otter's out there...
 
 ## <a> &#129446; </a> Goal of this project
@@ -54,20 +55,13 @@ OTTER: U+1F9A6
 
 :page_facing_up:
 
-:open_book:
-
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
-<<<<<<< HEAD
-## Project folder structure
-=======
 ## :books: Guide
 
 A simple guide to make sure you quickly understand how to use this template... Let's Go!
 
-
-### Project folder structure
->>>>>>> b95ba7aab7b579f85128cc1fdfd1e0b8ed64ecf4
+### :open_book: Project folder structure
 
     root
     ├── config

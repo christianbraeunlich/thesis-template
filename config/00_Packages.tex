@@ -1,22 +1,23 @@
-% **** Testing Packages **************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%              Packages                %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ______________ Packages __________________________________
+%   > Definition of global Parameters.
+%
+
+
+
+
+% ____User-Informations_____________________
 % 		- Definition of global Parameters.
 %
-% *************************************************************
+% ==========================================
 
-\usepackage{lipsum}
-% \lipsum
-% \lipsum[3-56]
-
-
-% **** User-Informations **************************************
-% 		- Definition of global Parameters.
-%
-% *************************************************************
-
-% Umlaute ------------------------------------------------------------------
+% ____ Umlaute _______________________________
 % 	Umlaute/Sonderzeichen wie äüöß direkt im Quelltext verwenden (CodePage).
 %		Erlaubt automatische Trennung von Worten mit Umlauten.
-% --------------------------------------------------------------------------
+% ==========================================
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -27,6 +28,10 @@
 % Anpassung an Landessprache -----------------------------------------------
 % 	Verwendet globale Option german siehe \documentclass
 % --------------------------------------------------------------------------
+%
+% ______________ Packages ____________________________________
+%   > Definition of global Parameters.
+%
 \usepackage{babel}
 
 
@@ -50,7 +55,7 @@
 % 	Einbinden von EPS-Grafiken [draft oder final]
 % 	Option [draft] bindet Bilder nicht ein - auch globale Option
 % --------------------------------------------------------------------------
-\usepackage[dvips,final]{graphicx}
+\usepackage[dvips, final]{graphicx}
 \graphicspath{{media/}} % Dort liegen die Bilder des Dokuments
 
 % Befehle aus AMSTeX für mathematische Symbole z.B. \boldsymbol \mathbb ----
@@ -115,82 +120,11 @@
 % Lange URLs umbrechen etc. -------------------------------------------------
 \usepackage{url}
 
-%\usepackage{jurabib}
-%\jurabibsetup{authorformat=smallcaps,% Autor in Kapitälchen              
-%              %authorformat=year,
-%              authorformat=citationreversed,% Im Zitat Vorname vorne
-%              authorformat=indexed,% Autor in Index
-%              authorformat=and,% Autoren mit "," und "und" abgetrennt
-%              authorformat=firstnotreversed,%
-%              authorformat=reducedifibidem,% Bei Verweis nur Nachname. 
-%              %superscriptedition=all,% Auflage hochgestellt
-%              %citefull=first,% Erstzitat voll
-%              titleformat=italic,              
-%              titleformat=all,
-%              titleformat=colonsep,% Doppelpunkt zwischen Aut. u. Titel
-%              ibidem=strict,% Ebenda pro Doppelseite
-%              see,% Das zweite Argument ist optional für "Vgl." etc.
-%              commabeforerest,% Komma vor Seitenzahl
-%              %howcited=compare,%
-%              %bibformat=ibidem,% Strich bei widerholtem Autor in BIB.
-%              commabeforerest,
-%              bibformat=compress,
-%              pages=always,
-%              %pages=format,% S. wird vorweggesetzt
-%              crossref=long,% Querverweise in voller Länge
-%              square,% eckige Klammern bei Zitaten
-%              %oxford,
-%              %chicago,
-%}
-%
-%\AddTo\bibsgerman{% 
-%\jblookforgender%
-%\renewcommand*{\ibidemname}{Ebenda}%
-%\renewcommand*{\ibidemmidname}{ebenda}% 
-%\renewcommand*{\bibjtsep}{In: }% Vor Zeitschriften 
-%\renewcommand*{\bibbtsep}{In: }% Vor Buchtitel
-%\renewcommand*{\incollinname}{In: }%Nicht so ganz sauber. 
-%\renewcommand*{\bibatsep}{.}% Nach Titel
-%\renewcommand*{\bibbdsep}{}%Vor Datum 
-%\renewcommand*{\jbaensep}{.}%
-%\renewcommand*{\bibprdelim}{)}% Klammer bei Zeitschriftjahr rechts
-%\renewcommand*{\bibpldelim}{(}% Klammer bei Zeitschriftjahr links
-%\renewcommand*{\biblnfont}{\textsc}% Nachamen Autor im BIB
-%\renewcommand*{\bibelnfont}{\textsc}% Nachamen Hg. im BIB
-%\renewcommand*{\bibfnfont}{\textsc}% Vorn. Autor im BIB
-%\renewcommand*{\bibefnfont}{\textsc}% Vorn. Hg. im BIB
-%\renewcommand*{\jbcitationyearformat}[1]{#1}% Komma zwischen Autor und Jahr entfernen
-%\def\herename{hier: }%
-%\jbfirstcitepageranges% Format: S. x--z, hier y.  
-%\renewcommand\bibidemSfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidemsfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidemPfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidempfname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidemSmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidemsmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidemPmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\bibidempmname{\raisebox{.2em}{\rule{2.em}{.2pt}}~}%
-%\renewcommand\idemSfname{Dies.}%
-%\renewcommand\idemsfname{dies.}%
-%\renewcommand\idemPfname{Dies.}%
-%\renewcommand\idempfname{dies.}%
-%\renewcommand\idemSmname{Ders.}%
-%\renewcommand\idemsmname{ders.}%
-%\renewcommand\idemPmname{Dies.}%
-%\renewcommand\idempmname{dies.}%
-%\renewcommand{\jbannoteformat}[1]{{\footnotesize\begin{quote}#1\end{quote}}}
-%}%
-
 % Paket zum sauberen Einbauen von externen PDF-Dateien -----------------
 \usepackage[final]{pdfpages}
 
 % Zum fortlaufenden Durchnummerieren der Fußnoten ---------------------------
 \usepackage{chngcntr}
-
-% Aliase für Zitate
-% \defcitealias{WPProzess}{Wikipedia:~Prozess}
-
-%\usepackage{minitoc}
 
 % Beschriftung von Tabellen und Bildern ändern ----------------------------------------------------------
 \addto\captionsngerman{

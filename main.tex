@@ -1,13 +1,31 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%               _   _            
-%              | | | |           
-%          ___ | |_| |_ ___ _ __ 
-%         / _ \| __| __/ _ \ '__|
-%        | (_) | |_| ||  __/ |   
-%         \___/ \__|\__\___|_|   
+% The MIT License (MIT)
 %
-%         .-"""-.
-%        /      o\
+% Copyright (c) 2020 Christian Bräunlich
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy of
+% this software and associated documentation files (the "Software"), to deal in
+% the Software without restriction, including without limitation the rights to
+% use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+% the Software, and to permit persons to whom the Software is furnished to do so,
+% subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+% FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+% COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+% IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+% CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                _   _            
+%                               | | | |           
+%                           ___ | |_| |_ ___ _ __ 
+%                          / _ \| __| __/ _ \ '__|
+%        .-"""-.          | (_) | |_| ||  __/ |   
+%       /      o\          \___/ \__|\__\___|_| 
 %       |    o   0).-.
 %       |       .-;(_/     .-.
 %        \     /  /)).---._|  `\   ,
@@ -16,61 +34,47 @@
 %            '.             |  `\-'
 %              '._        -'    /
 %                 ``""--`------`
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%              Thesis-Dokumenten-Vorlage               %%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% written in LaTeX with Overleaf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%            Thesis-Template           %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % Author: Christian Bräunlich
 % Date: 01.06.2020
-% Organization: Hochschule Flensburg University of Applied Sciences 
-% 
-% -- MIT License
 %
 % Copyright (c) [2020] [Christian Bräunlich]
-% 
-% more Infos available in: LICENSE.txt
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% ***********************
-% Document Configuration
-% ***********************
-% Benötigte Packages -------------------------------------------------------
-%		Weitere Packages, die benötigt werden, sind in die Datei Packages.tex
-%		"ausgelagert", um die Vorlage möglichst übersichtlich zu halten.
 %
-% --------------------------------------------------------------------------
-%%%
-%%% Benutzer Einstellungen
-\input{config/01_UserPreferences.tex}
-%%%
-%%% Dokumenten Klasse
+% __________________________________________________________
+
+% ____ Document-Configuration-Management ___________________
+%
+% ____ User-Informations ___________________________________
+\input{config/01_UserInformations.tex}
+
+% ____ Document-Class ______________________________________
 \input{config/02_DocumentClass.tex}
-%%%
-%%% Paket-Import
+
+% ____ Packages  ___________________________________________
 \input{config/00_Packages}
-%%%
-%%% Seiten Einstellungen
+
+% ____ Page-Layout Settings ________________________________
 \input{config/03_PageLayout}
-%%%
-%%% Chapter Style Einstellungen
+
+% ____ Chapter-Style _______________________________________
 \input{config/09_ChapterStyle}
-%%%
-%%% PDF Einstellungen
+
+% ____ PDF-Configuration ___________________________________
 \input{config/04_PdfConfig}
-%%%
-%%% Absatz Einstellungen
+
+% ____ Paragraph-Configuration _____________________________
 \input{config/06_ParagrahpConfig}
-%%%
-%%% Kopf- und Fußzeilen Einstellungen
+
+% ____ Header and Footer ___________________________________
 \input{config/050_HeaderAndFooter}
-%%%
-%%% Bibliotheken Klasse
+
+% ____ Bibliography ________________________________________
 \input{config/08_Bibliography}
-%%%
-%%% Anhang Klasse
+
+% ____ Appendix ____________________________________________
 \input{config/099_Appendix}
 
 %\usepackage{draftwatermark}
@@ -79,10 +83,8 @@
 %\SetWatermarkLightness{0.5}
 %\SetWatermarkScale{4}
 
-% Abkürzungsverzeichnis & Glossar ------------------------------------------
-%
-%
-% Erstellung eines Index und Abkürzungsverzeichnisses aktivieren -----------
+
+% ____ Glossary ____________________________________________
 %\makeindex
 %\makenomenclature
 %
@@ -92,7 +94,7 @@
 \input{pages/091_Glossary}
 \input{pages/092_Acronym}
 %
-% --------------------------------------------------------------------------
+% ----------------------------------------------------------
 
 \newcounter{blankpages}
 
@@ -135,57 +137,36 @@
     \def\@biblabel#1{\def\citeauthoryear##1##2{##1, ##2}[#1]\hfill}
 \makeatother
 
-% --------------------------------------------------------------------------
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%                     Dokument                     %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%                Document              %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%
-%
-%
-% Deckblatt ----------------------------------------------------------------
-%
+
+% ____ Title-Page __________________________________________
 \input{pages/00_Titlepage}
 \null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
-% Eidesstattliche Erklärung ------------------------------------------------
-%		Die eidesstattliche Erklärung befindet sich in der 001_Affidavit.tex
-%
-%
+
+% ____ Affidavit-Page ______________________________________
 \input{pages/98_Affidavit}
 \newpage\null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
+
+% ____ User-Informations ___________________________________
 \pagenumbering{roman}
 \setcounter{page}{1}
-%
-% Vorwort ------------------------------------------------------------------
-%		Hier steht das Vorwort des Dokuments
-%
+
+% ____ Preword _____________________________________________
 \input{pages/01_Vorwort}
 \newpage\null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
-% Abstract -----------------------------------------------------------------
-%		Hier steht das Abstract bzw. die Zusammenfassung des Dokuments
-%
+
+% ____ Abstract ____________________________________________
 \input{pages/02_Abstract}
 \newpage\null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
-% Dankesagung --------------------------------------------------------------
-%		Hier steht die Dankesagung des Dokuments
-%
+
+% ____ Acknowledgement _____________________________________
 \input{pages/03_Acknowledgement}
 \newpage\null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
-%
-% Inhaltsverzeichnis -------------------------------------------------------
-%
-%
+
+% ____ Table of Contents ___________________________________
 \input{config/07_ToC}
 %\thispagestyle{empty}                                  % disable numbering
 \addtocontents{toc}{\protect\thispagestyle{empty}}      % more then 1 page
@@ -198,62 +179,38 @@
 %
 %\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}     % Inhaltsverzeichnis zum Inhaltsverzeichnis hinzufügen
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
-\tableofcontents    % Inhaltsverzeichnis
-%
-%
-% --------------------------------------------------------------------------
-%
-% Abbildungsverzeichnis -------------------------------------------------------
-%
-%
+\tableofcontents % Inhaltsverzeichnis
+% ----------------------------------------------------------
+
+% ____ List of Figures _____________________________________
 \renewcommand{\listfigurename}{Abbildungsverzeichnis}
-\listoffigures      % Abbildungsverzeichnis
+\listoffigures % Abbildungsverzeichnis
 \pagenumbering{Roman}
-% --------------------------------------------------------------------------
-%
-% Tabellenverzeichnis ------------------------------------------------------
-%
-%
+
+% ____ Table of Contents ___________________________________
 \renewcommand{\listtablename}{Tabellenverzeichnis}
-\listoftables       % Tabellenverzeichnis
-% --------------------------------------------------------------------------
-%
-% Abkürzungsverzeichnis ----------------------------------------------------
-%
-%
+\listoftables % Tabellenverzeichnis
+
+% ____ Acronym _____________________________________________
 \clearpage
 \printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
-% --------------------------------------------------------------------------
-%
-% Glossar ------------------------------------------------------------------
-%
-%
+
+% ____ Glossar _____________________________________________
 \printglossary[title=Glossar]
 \newpage\null\thispagestyle{empty}\newpage % Empty Page
-% --------------------------------------------------------------------------
-%
-% Listings-Verzeichnis -----------------------------------------------------
-%
-%
+
+% ____ List of Listings ____________________________________
 %\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
 %\lstlistoflistings  % Listings-Verzeichnis
-% --------------------------------------------------------------------------
-%
-%
-%
-%
+% ----------------------------------------------------------
+
+
 % ...danach in normalen arabischen Ziffern ---------------------------------
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
-%
-%
-%
-% Inhalt -------------------------------------------------------------------
-%		Hier können jetzt die einzelnen Kapitel inkludiert werden. Sie müssen
-%		in den entsprechenden .TEX-Dateien vorliegen. Die Dateinamen können
-% 	    natürlich angepasst werden.
-%
+
+% ____ Content _____________________________________
 \input{content/01}
 \input{content/02}
 \input{content/03}
@@ -261,40 +218,31 @@
 \input{content/05}
 \input{content/06}
 \input{content/07}
-% --------------------------------------------------------------------------
-%
-%
+
+
 \cleardoublepage
 \newpage
 \pagenumbering{Roman}
-%
-% Literaturverzeichnis -----------------------------------------------------
-%		Das Literaturverzeichnis wird aus der Datenbank Bibliographie.bib 
-% 	    erstellt. Die genaue Verwendung von bibtex wird hier jedoch nicht erklärt.
+
+% ____ Bibliography ________________________________
 %		Link: http://de.wikipedia.org/wiki/BibTeX
 %
 %\bibliographystyle{plainnat}
 %\bibliography{literature}
-% --------------------------------------------------------------------------
+% --------------------------------------------------
 
-% Anhang -------------------------------------------------------------------
-%		Die Inhalte des Anhangs werden analog zu den Kapiteln inkludiert.
-%		Dies geschieht in der Datei 002_Appendix.tex
-%
+% ____ Appendix ____________________________________
 \begin{appendix}
 \setcounter{page}{5}
 \input{pages/99_Appendix}
 \end{appendix}
-% --------------------------------------------------------------------------
+% --------------------------------------------------
 
-% Index --------------------------------------------------------------------
-%		Zum Erstellen eines Index, die folgende Zeile auskommentieren.
-%
+% ____ Index _______________________________________
 \printindex		% Index hier einfügen
-% --------------------------------------------------------------------------
 
+% ____ End of Document _____________________________
 \end{document}
-% --------------------------------------------------------------------------
 %
 %          .----.__
 %         / c  ^  _`;
@@ -314,4 +262,3 @@
 %              `''''--, )
 %                _.-'`,`
 %                 ````
-%
