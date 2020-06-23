@@ -44,10 +44,11 @@
 </p>
 <br/>
 
-<a> Thesis Template written in LaTeX
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100">
-</a>
-
+<p align="center">
+    <a><FONT SIZE="5"> Thesis Template written in LaTeX</FONT>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100">
+    </a>
+</p>
 # Thesis Template written in LaTeX
 
 > dedicated to all clumsy otter's out there...
