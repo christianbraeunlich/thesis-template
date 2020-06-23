@@ -44,13 +44,13 @@
 </p>
 <br/>
 
-<table style="margin-left: auto; margin-right: auto;">
+<table>
  <tr>
     <th>
-        <h1 style="color:orange;font-size:200%;vertical-align:middle">Thesis Template written in</h1>
+        <h1>Thesis Template written in</h1>
     </th>
     <th>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="150" height="100" alt="" style="float:right;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="125" height="80">
     </th>
   </tr>
 </table>
