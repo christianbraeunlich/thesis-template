@@ -44,23 +44,16 @@
 </p>
 <br/>
 
-<div align="center">
-    <table style="align: center; width: 100%;>
-     <tr>
-        <th>
-            <img src="media/logo.jpg" height="150" width="150" alt="" style="float:left;" />Text
-        </th>
-        <th>
-            <header>
-                <h1 style="color:orange;font-size:200%;vertical-align:middle">Thesis Template written in</h1>
-            </header>
-        </th>
-        <th>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="100" height="100" alt="" style="float:right;">
-        </th>
-      </tr>
-    </table>
-</div>
+<table style="margin-left: auto; margin-right: auto;">
+ <tr>
+    <th>
+        <h1 style="color:orange;font-size:200%;vertical-align:middle">Thesis Template written in</h1>
+    </th>
+    <th>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="150" height="100" alt="" style="float:right;">
+    </th>
+  </tr>
+</table>
 
 > dedicated to all clumsy otter's out there...
 
