@@ -44,20 +44,25 @@
 </p>
 <br/>
 
-# Thesis Template written in LaTeX
+<table>
+ <tr>
+    <th>
+        <h1>Thesis Template written in</h1>
+    </th>
+    <th>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png" alt="LaTeX" width="125" height="80">
+    </th>
+  </tr>
+</table>
 
 > focus on what matters MOST . . .
 > dedicated to all clumsy otter's out there...
 
-## <a> &#129446; </a> Goal of this project
-
-OTTER: U+1F9A6
-
-:page_facing_up:
+## :otter: Goal of this project
 
 > Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
 
-## :books: Guide
+## :page_facing_up: Guide
 
 A simple guide to make sure you quickly understand how to use this template... Let's Go!
 
@@ -82,6 +87,29 @@ A simple guide to make sure you quickly understand how to use this template... L
         ├── 02_Abstract.tex        
         └── 03_Acknowledgement.tex    
 
+### :books: Bibliography
+
+**Citation**
+
+    \cite{Johann2017} 
+
+**BibTeX-Entry**
+
+    @article{Johann2017,
+        abstract = {A main advantage of app stores is that they aggregate important information created by ...},
+        author = {Johann, Timo and Stanik, Christoph and Alizadeh, Alireza M.B. and Maalej, Walid},
+        doi = {10.1109/RE.2017.71},
+        file = {SAFE A Simple Approach for Feature Extraction from App Descriptions and App Reviews.pdf},
+        isbn = {9781538631911},
+        journal = {Proceedings - 2017 IEEE 25th International Requirements Engineering Conference, RE 2017},
+        keywords = {App Store Analytics,Data Mining,Data-Driven Requirements,Software Feature,User Reviews},
+        mendeley-groups = {Feature Extraction},
+        pages = {21--30},
+        publisher = {IEEE},
+        title = {{SAFE: A Simple Approach for Feature Extraction from App Descriptions and App Reviews}},
+        year = {2017}
+    }
+
 ### Useful tools
 
 | TeX-Editor            |        Platform       | Difficulty        |
@@ -91,6 +119,9 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ## Acknowledgment
 
+    Special thanks to:
+    - Adrian
+    - Kai
 
 ## ❤️ Community and Contributions
 
