@@ -4,18 +4,16 @@
 %
 % ____ Adding lines above the chapter head _________________
 %
-% 1st get a new command
-\newcommand*{\ORIGchapterheadstartvskip}{}%
-% 2nd save the original definition to the new command
-\let\ORIGchapterheadstartvskip=\chapterheadstartvskip
-% 3rd redefine the command using the saved original command
-\renewcommand*{\chapterheadstartvskip}{%
-  \ORIGchapterheadstartvskip
-  {%
-    \setlength{\parskip}{0pt}%
-    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
-  }%
-}
+
+%\newcommand*{\ORIGchapterheadstartvskip}{}%
+%\let\ORIGchapterheadstartvskip=\chapterheadstartvskip
+%\renewcommand*{\chapterheadstartvskip}{%
+%  \ORIGchapterheadstartvskip
+%  {%
+%    \setlength{\parskip}{0pt}%
+%    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
+%  }%
+%}
  
 % ____ Adding lines below the chapter head _________________
 \newcommand*{\ORIGchapterheadendvskip}{}%

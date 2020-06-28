@@ -8,16 +8,13 @@ FROM ubuntu:${UBUNTU_VERSION}
 
 # Environment variables
 ENV WORKING_DIR /app
-ENV DEBIAN_FRONTEND=noninteractive
+#ENV DEBIAN_FRONTEND=noninteractive
 
 # Maintainer(s)
-LABEL maintainer="sundowneffect@gmail.com"
+LABEL maintainer="OtterWhisperer"
 
 # Create working directory
 RUN mkdir ${WORKING_DIR}
-
-# In the future:
-# Offline Overleaf: https://github.com/overleaf/overleaf
 
 # Run installation process
 RUN apt-get update \

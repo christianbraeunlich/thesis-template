@@ -6,21 +6,25 @@
 %   > Definition of global Parameters.
 %
 
-
-
-
 % ____User-Informations_____________________
 % 		- Definition of global Parameters.
 %
 % ==========================================
 
-% ____ Umlaute _______________________________
+% ____ Umlaute _____________________________
 % 	Umlaute/Sonderzeichen wie äüöß direkt im Quelltext verwenden (CodePage).
 %		Erlaubt automatische Trennung von Worten mit Umlauten.
 % ==========================================
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
+% ____ Schriftart __________________________
+%   > Arial
+% ==========================================
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{lmodern}
 %\usepackage{ae} % "schöneres" ß
 \usepackage{textcomp} % Euro-Zeichen etc.
