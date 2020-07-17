@@ -20,7 +20,7 @@
         <img src="https://img.shields.io/github/tag/otterwhisperer/thesis-template.svg" alt="GitHub tag (latest SemVer)">
     </a>
     <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
-        <img src="https://img.shields.io/github/downloads/otterwhisperer/thesis-template/total.svg" alt="GitHub downloads">
+        <img src="https://img.shields.io/github/downloads/OtterWhisperer/thesis-template/latest/total.svg" alt="GitHub downloads">
     </a>
     <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
