@@ -123,6 +123,11 @@ A simple guide to make sure you quickly understand how to use this template... L
     - Adrian
     - Kai
 
+## Footnotes
+\footnote{this footnote is an example\label{fn:example}}
+\footref{fn:example}
+
+
 ## ❤️ Community and Contributions
 
 1. Fork it (<https://github.com/otterwhisperer/thesis-template/fork>)
