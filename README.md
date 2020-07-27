@@ -92,15 +92,15 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 **BibTeX-Entry**
 
-@InProceedings{OtterWhisperer:2020,
-  author    = {Bräunlich, Christian},
-  title     = {thesis-template},
-  month     = {July},
-  year      = {2020},
-  address   = {Karlsruhe},
-  publisher = {GitHub.com},
-  url       = {https://github.com/OtterWhisperer/thesis-template},
-}
+    @InProceedings{OtterWhisperer:2020,
+      author    = {Bräunlich, Christian},
+      title     = {thesis-template},
+      month     = {July},
+      year      = {2020},
+      address   = {Karlsruhe},
+      publisher = {GitHub.com},
+      url       = {https://github.com/OtterWhisperer/thesis-template},
+    }
 
 ### Useful tools
 
