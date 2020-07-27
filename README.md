@@ -19,9 +19,6 @@
     <a href="https://github.com/otterwhisperer/thesis-template/releases" target="_blank">
         <img src="https://img.shields.io/github/tag/otterwhisperer/thesis-template.svg" alt="GitHub tag (latest SemVer)">
     </a>
-    <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
-        <img src="https://img.shields.io/github/downloads/OtterWhisperer/thesis-template/latest/total.svg" alt="GitHub downloads">
-    </a>
     <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
     </a>
@@ -95,20 +92,15 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 **BibTeX-Entry**
 
-    @article{Johann2017,
-        abstract = {A main advantage of app stores is that they aggregate important information created by ...},
-        author = {Johann, Timo and Stanik, Christoph and Alizadeh, Alireza M.B. and Maalej, Walid},
-        doi = {10.1109/RE.2017.71},
-        file = {SAFE A Simple Approach for Feature Extraction from App Descriptions and App Reviews.pdf},
-        isbn = {9781538631911},
-        journal = {Proceedings - 2017 IEEE 25th International Requirements Engineering Conference, RE 2017},
-        keywords = {App Store Analytics,Data Mining,Data-Driven Requirements,Software Feature,User Reviews},
-        mendeley-groups = {Feature Extraction},
-        pages = {21--30},
-        publisher = {IEEE},
-        title = {{SAFE: A Simple Approach for Feature Extraction from App Descriptions and App Reviews}},
-        year = {2017}
-    }
+@InProceedings{OtterWhisperer:2020,
+  author    = {Bräunlich, Christian},
+  title     = {thesis-template},
+  month     = {July},
+  year      = {2020},
+  address   = {Karlsruhe},
+  publisher = {GitHub.com},
+  url       = {https://github.com/OtterWhisperer/thesis-template},
+}
 
 ### Useful tools
 
@@ -125,7 +117,7 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ## Footnotes
 
-\footnote{this footnote is an example\label{fn:example}}
+\footnote{simple footnote example\label{fn:example}}
 
 \footref{fn:example}
 
