@@ -6,7 +6,54 @@
 \renewcommand{\bibname}{Literaturverzeichnis}
 
 % ____ Bibliography-Style __________________________________
-\usepackage[square]{natbib}                     
+% \usepackage[square]{natbib}                     
 
 % ____ Literature-Verweise in eckigen Klammern _____________
-\bibpunct{[}{]}{;}{a}{}{,~}
+% \bibpunct{[}{]}{;}{a}{}{,~}
+
+%\DefineBibliographyStrings{english}{%
+%    backrefpage  = {see p.}, % for single page number
+%    backrefpages = {see pp.} % for multiple page numbers
+%}
+
+\usepackage{amsmath}
+
+%\usepackage{comment}
+
+\usepackage[
+    backend=biber
+    ,style=alphabetic
+    %,style=authoryear
+    %
+    % SORTING
+    ,sorting=ynt
+    %,sorting=nty           % sort by name, title, year%
+    %,sorting=nyt           % sort by name, year, title
+    %,sorting=nyvt          % sort by name, year, volume, title
+    %,sorting=anyt          % sort by alphabetic label, name, year, title
+    %,sorting=anyvt         % sort by alphabetic label, name, year, volume, title
+    %,sorting=ydnt          % sort by year (descending), name, title
+    %,sorting=none          % entries are processed in citation order
+    %
+    %,sortcites=false       % some other example options ...
+    %,block=none
+    ,indexing=true
+    %,citereset=none
+    %,url=true
+    %,isbn=true
+    %,doi=true              % prints doi
+    ,backref               % Fügt im Literaturverzeichnis einen Rücksprungspunkt ein
+    %,backref=section,                % ???
+    %,backref=slide,                  % ???
+    ,natbib=true           % if you need natbib functions
+]{biblatex}
+
+% natbib functionality
+%
+% command	description
+% \citet{}	Textual citation
+% \citep{}	Parenthetical citation
+% \citet*{}	Same as \citet but if there are several authors, all names are printed
+% \citep*{}	The same as \citep but if there are several authors, all names are printed
+% \citeauthor{}	Prints only the name of the authors(s)
+% \citeyear{}	Prints only the year of the publication.

@@ -1,6 +1,7 @@
 % The MIT License (MIT)
 %
 % Copyright (c) 2020 Christian Bräunlich
+% Github: https://github.com/OtterWhisperer/thesis-template
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy of
 % this software and associated documentation files (the "Software"), to deal in
@@ -42,6 +43,7 @@
 % Date: 01.06.2020
 %
 % Copyright (c) [2020] [Christian Bräunlich]
+% Github: https://github.com/OtterWhisperer/thesis-template
 %
 % __________________________________________________________
 
@@ -62,6 +64,9 @@
 % ____ Chapter-Style _______________________________________
 \input{config/09_ChapterStyle}
 
+% ____ Epigraph ____________________________________________
+\input{config/12_epigraphs}
+
 % ____ PDF-Configuration ___________________________________
 \input{config/04_PdfConfig}
 
@@ -73,28 +78,28 @@
 
 % ____ Bibliography ________________________________________
 \input{config/08_Bibliography}
+\addbibresource{bibliography.bib}
 
 % ____ Appendix ____________________________________________
 \input{config/099_Appendix}
 
-%\usepackage{draftwatermark}
-%\usepackage[firstpage]{draftwatermark}
-%\SetWatermarkText{BIO-HAZARD}
-%\SetWatermarkLightness{0.5}
-%\SetWatermarkScale{4}
-
-
 % ____ Glossary ____________________________________________
+\usepackage[xindy={language=german, codepage=utf8}, acronym, toc, hyperfirst=true]{glossaries}
+\renewcommand*{\glspostdescription}{}               % Den Punkt am Ende jeder Beschreibung deaktivieren
+%\input{pages/091_Glossary}
 %\makeindex
 %\makenomenclature
 %
-\usepackage[acronym]{glossaries}
-\makeglossaries
+% Abkürzungsverzeichnis
+
+%\makeglossaries
 %
-\input{pages/091_Glossary}
 \input{pages/092_Acronym}
 %
 % ----------------------------------------------------------
+
+%\newcommand{\secref}[1]{\autoref{#1}. \nameref{#1}}
+\newcommand{\secref}[1]{\autoref{#1}.}
 
 \newcounter{blankpages}
 
@@ -107,7 +112,6 @@
   \hbox {}\newpage \if@twocolumn \hbox {}\newpage \fi 
 \fi \fi }
 \makeatletter
-
 
 \renewcommand\thepage{\the\numexpr\value{page}-\value{blankpages}\relax}
 
@@ -138,17 +142,64 @@
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx}
+
+\usepackage{awesomebox}
+% \notebox{\lipsum[2]}
+% \tipbox{\lipsum[3]}
+% \warningbox{\lipsum[4]}
+% \cautionbox{\lipsum[5]}
+% \importantbox{\lipsum[6]}
+
+\usepackage{rotating}
+
+\usepackage[section]{placeins}
+
+\usepackage{footnote}
+
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{subfigure}
+\usepackage{multirow}
+
+\usepackage{adjustbox}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\usepackage{chngcntr}
+
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+%\counterwithin{figure}{section}
+%\counterwithin{table}{section}
+
+\usepackage{wrapfig} % text um figure
+
+\usepackage{enumitem}
+
+\usepackage{rotating}
+\usepackage{tikz}
+
+
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%                Document              %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 % ____ Title-Page __________________________________________
 \input{pages/00_Titlepage}
-\null\thispagestyle{empty}\newpage % Empty Page
+\cleardoublepage
 
 % ____ Affidavit-Page ______________________________________
 \input{pages/98_Affidavit}
-\newpage\null\thispagestyle{empty}\newpage % Empty Page
+\cleardoublepage
 
 % ____ User-Informations ___________________________________
 \pagenumbering{roman}
@@ -156,15 +207,15 @@
 
 % ____ Preword _____________________________________________
 \input{pages/01_Vorwort}
-\newpage\null\thispagestyle{empty}\newpage % Empty Page
+\cleardoublepage
 
 % ____ Abstract ____________________________________________
 \input{pages/02_Abstract}
-\newpage\null\thispagestyle{empty}\newpage % Empty Page
+\cleardoublepage
 
 % ____ Acknowledgement _____________________________________
 \input{pages/03_Acknowledgement}
-\newpage\null\thispagestyle{empty}\newpage % Empty Page
+\cleardoublepage
 
 % ____ Table of Contents ___________________________________
 \input{config/07_ToC}
@@ -175,7 +226,6 @@
 \AfterStartingTOC[toc]{\clearpage}
 %
 \cleardoublepage
-\phantomsection
 %
 %\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}     % Inhaltsverzeichnis zum Inhaltsverzeichnis hinzufügen
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
@@ -185,61 +235,65 @@
 % ____ List of Figures _____________________________________
 \renewcommand{\listfigurename}{Abbildungsverzeichnis}
 \listoffigures % Abbildungsverzeichnis
-\pagenumbering{Roman}
+\pagenumbering{roman}
 
-% ____ Table of Contents ___________________________________
+% ____ List of Tables ______________________________________
+% \setcounter{table}{0} \renewcommand{\thetable}{\arabic{table}}        % change numbering-format
 \renewcommand{\listtablename}{Tabellenverzeichnis}
 \listoftables % Tabellenverzeichnis
 
 % ____ Acronym _____________________________________________
-\clearpage
-\printglossary[title=Abkürzungsverzeichnis, type=\acronymtype]
+\printglossary[title=Abkürzungsverzeichnis, nogroupskip, nonumberlist, type=\acronymtype, style=superheader]
+%\printglossary[title=Abkürzungsverzeichnis, nogroupskip, nonumberlist, type=\acronymtype, style=super]
+
+% ____ Symbols _____________________________________________
+% \printglossary[type=symbolslist, style=long]
 
 % ____ Glossar _____________________________________________
-\printglossary[title=Glossar]
-\newpage\null\thispagestyle{empty}\newpage % Empty Page
+%\printglossary[title=Glossar, nonumberlist, style=tree]
+%\newpage\null\thispagestyle{empty}\newpage                  % Empty Page
 
 % ____ List of Listings ____________________________________
 %\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
 %\lstlistoflistings  % Listings-Verzeichnis
 % ----------------------------------------------------------
 
-
-% ...danach in normalen arabischen Ziffern ---------------------------------
-\clearpage
+% ...danach in normalen arabischen Ziffern -----------------
+\cleardoublepage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 % ____ Content _____________________________________
-\input{content/01}
-\input{content/02}
-\input{content/03}
-\input{content/04}
-\input{content/05}
-\input{content/06}
-\input{content/07}
-
-
+\input{content/01_Einleitung}
+\setcounter{table}{0} \renewcommand{\thetable}{\arabic{table}}
+\input{content/02_Grundlagen}
+\input{content/03_Durchführung_Features}
+\input{content/04_Durchführung_Integration}
+\input{content/05_Ergebnisse}
+\input{content/06_Conclusion}
 \cleardoublepage
 \newpage
 \pagenumbering{Roman}
 
 % ____ Bibliography ________________________________
-%		Link: http://de.wikipedia.org/wiki/BibTeX
+%		Link: http://de.wikipedia.org/wiki/Bib-TeX
 %
-%\bibliographystyle{plainnat}
-%\bibliography{literature}
+\printbibliography[title=Literaturverzeichnis, heading=bibintoc]
+%\printbibliography[type=article,title={Articles only}]
+%\printbibliography[type=book,title={Books only}]
+%\printbibliography[keyword={physics},title={Physics-related only}]
+%\printbibliography[keyword={latex},title={\LaTeX-related only}]
 % --------------------------------------------------
 
 % ____ Appendix ____________________________________
 \begin{appendix}
-\setcounter{page}{5}
+%\setcounter{page}{5}
 \input{pages/99_Appendix}
 \end{appendix}
 % --------------------------------------------------
 
 % ____ Index _______________________________________
-\printindex		% Index hier einfügen
+% \printindex		% Index hier einfügen
 
 % ____ End of Document _____________________________
 \end{document}

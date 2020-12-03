@@ -1,10 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%              Bibliography            %%%%%%%%%%%
+%%%%%%%%%%%              Chapter-Style           %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % ____ Adding lines above the chapter head _________________
 %
-
 %\newcommand*{\ORIGchapterheadstartvskip}{}%
 %\let\ORIGchapterheadstartvskip=\chapterheadstartvskip
 %\renewcommand*{\chapterheadstartvskip}{%
@@ -14,10 +13,11 @@
 %    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
 %  }%
 %}
+
  
 % ____ Adding lines below the chapter head _________________
 \newcommand*{\ORIGchapterheadendvskip}{}%
-\let\ORIGchapterheadendvskip=\chapterheadendvskip
+\let\ORIGchapterheadendvskip=\chapterheadendvskip{\bfseries\Large}
 \renewcommand*{\chapterheadendvskip}{%
   {%
     \setlength{\parskip}{0pt}%
@@ -25,3 +25,12 @@
   }%
   \ORIGchapterheadendvskip
 }
+
+%%%% experimental
+
+%\titleformat{\chapter}[display]
+%  {\bfseries\Large}
+%  {\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+%  {1ex}
+%  {\titlerule\vspace{1ex}\filleft}
+%  [\vspace{1ex}\titlerule]

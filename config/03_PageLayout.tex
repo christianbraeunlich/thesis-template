@@ -8,8 +8,13 @@
 %
 % https://...
 %
-\usepackage{setspace}
-\usepackage[
+
+
+\makeatletter
+\if@twoside%
+   %%%%%%%%%%%%%%% TWO-SIDE
+
+   \usepackage[
 	paper=a4paper,          % Change to letterpaper for US letter
 	inner=2.0cm,            % Inner margin
 	outer=2.0cm,            % Outer margin
@@ -17,10 +22,39 @@
 	top=1.5cm,              % Top margin
 	bottom=1.5cm,           % Bottom margin
 	includeheadfoot,        % Kopf- und Fußzeile einbinden
-	footnotesep=2.0cm,      % Fußnoten Abstand
+	footnotesep=1.25cm,      % Fußnoten Abstand
+    %headsep=1.25cm,          % Kopfzeilen Abstand
+	%showframe,             % Uncomment to show how the type block is set on the page
+	]{geometry}
+	
+	%\setlength{\marginparsep}{1.25cm}
+    \setlength{\marginparwidth}{1.25cm}
+    
+    %\setlength{\topmargin}{0.00cm}
+    %\setlength{\headheight}{0.25cm}
+    %\setlength{\headsep}{0.25cm} %% Setting for gap in header and main body%%
+    \setlength{\textheight}{24.0cm}
+    %\setlength{\textwidth}{14.65cm}
+    \setlength{\footskip}{1.25cm}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%
+\else%
+   %%%%%%%%%%%%%%% ONE-SIDE
+
+   \usepackage[
+	paper=a4paper,          % Change to letterpaper for US letter
+	%inner=2.0cm,            % Inner margin
+	%outer=2.0cm,            % Outer margin
+	%bindingoffset=1.0cm,    % Binding offset
+	%top=1.5cm,              % Top margin
+	%bottom=1.5cm,           % Bottom margin
+	includeheadfoot,        % Kopf- und Fußzeile einbinden
+	%footnotesep=2cm,      % Fußnoten Abstand
     %headsep=2.0cm,          % Kopfzeilen Abstand
 	%showframe,             % Uncomment to show how the type block is set on the page
 	]{geometry}
+\fi%  
+\makeatother
 
 %\usepackage{showframe}      % zum Anzeigen des Seitenlayouts
 
@@ -36,17 +70,14 @@
 %\setlength{\oddsidemargin}{1.27cm}
 
 %\setlength{\marginparsep}{1.25cm}
-\setlength{\marginparwidth}{1.25cm}
+% \setlength{\marginparwidth}{1.25cm}
 
 %\setlength{\topmargin}{0.00cm}
 %\setlength{\headheight}{0.25cm}
 %\setlength{\headsep}{0.25cm} %% Setting for gap in header and main body%%
-\setlength{\textheight}{24.0cm}
+% \setlength{\textheight}{24.0cm}
 %\setlength{\textwidth}{14.65cm}
-\setlength{\footskip}{1.5cm}
-
-% Zeilenabstand ------------------------------------------------------------
-\onehalfspacing
+% \setlength{\footskip}{1.5cm}
 
 % erzeugt ein wenig mehr Platz hinter einem Punkt --------------------------
 \frenchspacing 

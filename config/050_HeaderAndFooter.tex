@@ -6,9 +6,22 @@
 \usepackage[
 	automark,		% Kapitelangaben in Kopfzeile automatisch erstellen
 	%headtopline,   % Trennlinie über Kopfzeile
-	headsepline,	% Trennlinie unter Kopfzeile
+    headsepline,	% Trennlinie unter Kopfzeile
 	ilines		    % Trennlinie linksbündig ausrichten
 ]{scrlayer-scrpage}
+
+\clearscrheadfoot
+%\cfoot[\pagemark]{\pagemark}
+
+\cfoot[\parbox{\textwidth}{\hrulefill\kern-0.6ex\raisebox{-0.5ex}{$\Bigl[$\makebox[2em][c]{\thepage}$\Bigr]$}\kern-0.5ex\hrulefill}]{\parbox{\textwidth}{\hrulefill\kern-0.6ex\raisebox{-0.5ex}{$\Bigl[$\makebox[2em][c]{\thepage}$\Bigr]$}\kern-0.5ex\hrulefill}}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,RO]{Share\LaTeX}
+%\fancyhead[RE,LO]{Guides and tutorials}
+%\fancyfoot[CE,CO]{\pagemark}
+%\fancyfoot[LE,RO]{\thepage}
 
 %\clearpairofpagestyles
 %\headtopline{2pt}

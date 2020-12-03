@@ -6,6 +6,15 @@
 %   > Definition of global Parameters.
 %
 
+% Fußnoten
+\usepackage[
+  perpage,            % default
+  %para,               % fortlaufend (sehr platzsparend! )
+  hang,               % bündig mit dem Rand
+  %side,               % setzt fußnoten an den Rand
+  flushmargin         % eng aneinander liegend (bündig)
+]{footmisc}
+
 % ____User-Informations_____________________
 % 		- Definition of global Parameters.
 %
@@ -25,7 +34,7 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage{lmodern}
+%\usepackage{lmodern}                         % Latin Modern
 %\usepackage{ae} % "schöneres" ß
 \usepackage{textcomp} % Euro-Zeichen etc.
 
@@ -38,9 +47,7 @@
 %
 \usepackage{babel}
 
-
 \usepackage{emptypage}
-
 
 \usepackage{tocbasic}
 
@@ -50,11 +57,6 @@
 % Bessere Unterstreichungen ---------------------------------------------
 \usepackage[normalem]{ulem}
 
-
-% Abkürzungsverzeichnis
-\usepackage[acronym, toc]{glossaries}
-\makeglossaries
-
 % Grafiken -----------------------------------------------------------------
 % 	Einbinden von EPS-Grafiken [draft oder final]
 % 	Option [draft] bindet Bilder nicht ein - auch globale Option
@@ -63,7 +65,7 @@
 \graphicspath{{media/}} % Dort liegen die Bilder des Dokuments
 
 % Befehle aus AMSTeX für mathematische Symbole z.B. \boldsymbol \mathbb ----
-\usepackage{amsmath,amsfonts}
+\usepackage{amsmath, amsfonts}
 
 %
 % Zeilenumbruch bei Bildbeschreibungen
@@ -90,11 +92,10 @@
 
 % zum Umfließen von Bildern ---------------------------------------------------------
 \usepackage[vflt]{floatflt}
-\usepackage{subfigure}
 
 % Zum Einbinden von Programmcode --------------------------------------------
 \usepackage{listings}
-\usepackage{xcolor} 
+\usepackage[table, xcdraw, x11names]{xcolor}
 \definecolor{hellgelb}{rgb}{1,1,0.9}
 \definecolor{colKeys}{rgb}{0,0,1}
 \definecolor{colIdentifier}{rgb}{0,0,0}
@@ -122,7 +123,7 @@
 }
 
 % Lange URLs umbrechen etc. -------------------------------------------------
-\usepackage{url}
+\usepackage[hyphens]{url}
 
 % Paket zum sauberen Einbauen von externen PDF-Dateien -----------------
 \usepackage[final]{pdfpages}
@@ -145,42 +146,9 @@
 \usepackage{ragged2e}
 \usepackage{lscape}
 
-%Spaltendefinition rechtsbündig mit definierter Breite
+% Spaltendefinition rechtsbündig mit definierter Breite
 \newcolumntype{z}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
 
 % Formatierung von Listen ändern
 \usepackage{paralist}
 % \setdefaultleftmargin{2.5em}{2.2em}{1.87em}{1.7em}{1em}{1em}
-
-% Anhangsverzeichnis
-%\makeatletter% --> De-TeX-FAQ
-%\newcommand*{\maintoc}{% Hauptinhaltsverzeichnis
-%\begingroup
-%\@fileswfalse% kein neues Verzeichnis öffnen
-%\renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
-%\value{tocdepth}=-10000 % lokal tocdepth auf sehr kleinen Wert setzen
-%}%
-%\tableofcontents% Verzeichnis ausgeben
-%\endgroup
-%}
-%\newcommand*{\appendixtoc}{% Anhangsinhaltsverzeichnis
-%\begingroup
-%\edef\@alltocdepth{\the\value{tocdepth}}% tocdepth merken
-%\setcounter{tocdepth}{-10000}% Keine Verzeichniseinträge
-%\renewcommand*{\contentsname}{% Verzeichnisname ändern
-%Verzeichnis der Anh\"ange}%
-%\renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
-%\setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
-%}%
-%\tableofcontents% Verzeichnis ausgeben
-%\setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
-%\endgroup
-%}
-%\newcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
-%}
-%\g@addto@macro\appendix{% \appendix erweitern
-%\if@openright\cleardoublepage\else\clearpage\fi% Neue Seite
-%\addcontentsline{toc}{chapter}{\appendixname}% Eintrag ins Hauptverzeichnis
-%\addtocontents{toc}{\protect\appendixattoc}% Trennanweisung in die toc-Datei
-%}
-%\makeatother

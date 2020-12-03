@@ -4,27 +4,39 @@
 %
 % ____ Absätze _____________________________________________
 %
+\usepackage{parskip}                % 
+\usepackage{setspace}               % Abstand zwischen Absätzen
+\onehalfspacing                     % Zeilenabstand 1,5
+%\setlength{\parindent}{.25cm}
+%\setlength{\parskip}{.25cm}
+%\renewcommand{\baselinestretch}{1.5}
 
-\RedeclareSectionCommand[
-  beforeskip=-2.5\baselineskip,
-  afterskip=1\baselineskip]{chapter}
+\RedeclareSectionCommand[%
+  beforeskip=-1.0\baselineskip,
+  afterskip=.5\baselineskip
+  ]{chapter}
   
-\RedeclareSectionCommand[
-  beforeskip=-0.5\baselineskip,
-  afterskip=0.25\baselineskip]{section}
+\RedeclareSectionCommand[%
+  beforeskip=-0.75\baselineskip,
+  afterskip=0.5\baselineskip
+  ]{section}
   
-\RedeclareSectionCommand[
-  beforeskip=-.75\baselineskip,
-  afterskip=.5\baselineskip]{subsection}
-  
-\RedeclareSectionCommand[
+\RedeclareSectionCommand[%
   beforeskip=-.5\baselineskip,
-  afterskip=.25\baselineskip]{subsubsection}
+  afterskip=.25\baselineskip
+  ]{subsection}
   
-\RedeclareSectionCommand[
+\RedeclareSectionCommand[%
+  beforeskip=-.5\baselineskip,
+  afterskip=.25\baselineskip
+  ]{subsubsection}
+  
+\RedeclareSectionCommand[%
   beforeskip=.5\baselineskip,
-  afterskip=-1em]{paragraph}
+  afterskip=-1em
+  ]{paragraph}
   
-\RedeclareSectionCommand[
+\RedeclareSectionCommand[%
   beforeskip=-.5\baselineskip,
-  afterskip=-1em]{subparagraph}
+  afterskip=-1em
+  ]{subparagraph}

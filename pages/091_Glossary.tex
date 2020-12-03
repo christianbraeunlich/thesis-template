@@ -2,29 +2,192 @@
 %%%%%%%%%%%               Glossar                %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% ____ Commands ____________________________________________
+%
+% \gls{ }       To print the term, lowercase.
+% \Gls{ }       The same as \gls but the first letter will be printed in uppercase.
+% \glspl{ }     The same as \gls but the term is put in its plural form.
+% \Glspl{ }     % The same as \Gls but the term is put in its plural form.
+
+\usepackage[xindy={language=german, codepage=utf8}, acronym, toc, hyperfirst=true]{glossaries}
+
+%\usepackage[stylemods=bookindex, xindy={language=german, codepage=utf8}, acronym, toc, hyperfirst=true]{glossaries-extra}
+
+%
+% ____ Template-Standard ___________________________________
+%
+%\newglossaryentry{matrix}                          % Die Beschriftung
+%{
+%   name={matrix},                                  % Der Term
+%   description={a rectangular table of elements},  % Beschreibung
+%   plural={matrices}                               % Plural
+%}
+
+%
+% ____ Template-Abkürzung __________________________________
+%
+%\newglossaryentry{svm}                             % Die Beschriftung
+%{
+%   name={SVM},                                     % Der Term
+%   type=symbolslist,                              % glossary type
+%   description={support vector machine},           % Beschreibung
+%   first={support vector machine (SVM)},           
+%   firstplural={support vector machines (SVMs)},
+%   text={SVM},
+%   plural={SVMs},
+%   sort={Text}
+%} 
+
+% \newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis} % Symbolverzeichnis erstellen
+% \newglossary*{pm}{PM}
+\renewcommand*{\glspostdescription}{}               % Den Punkt am Ende jeder Beschreibung deaktivieren
+
+\renewcommand{\glstreeitem}{%
+ \parindent0pt\par\hangindent40pt
+ \everypar{\parindent50pt\hangindent40pt}}
+
+
+\makeglossaries                                     % Glossar-Befehle anschalten
+
+%%%% Eigenen Stil für das Formelverzeichnis definieren
+% \newglossarystyle{MyStyle}{
+%   \glossarystyle{long3colheader}
+%   \renewenvironment{theglossary}
+%   {\begin{longtable}{lp{2cm}p{\glsdescwidth}}}
+%     {\end{longtable}}
+%   \renewcommand*{\glossaryheader}{\textbf{Symbol} & \textbf{Einheit} &
+%     \textbf{Beschreibung}\\[3ex]\endhead}% ÄNDERUNG: Kopf auf jeder Seite wiederholen
+%   \renewcommand*{\glossaryentryfield}[5]{%
+%     \glsentryitem{##1}\glstarget{##1}{##2} & ##4 & ##3  \\[1ex]}% 
+% }
+%
 % ____ Glossar _____________________________________________
 %
-\newglossaryentry{spaCy}
+
+%% Allgemeines
+
+\newglossaryentry{general}{name=Allgemeines\\,description={\nopostdesc}}
+
+\newglossaryentry{API} 
+{
+    name={Application Programming Interface (API)},
+    description={An Application Programming Interface (API) is a particular set of rules and specifications that a software program can follow to access and make use of the services and resources provided by another particular software program that implements that API},
+    first={Application Programming Interface (API)},
+    text={API},
+    parent=general
+}
+
+\newglossaryentry{iso}                              % Die Beschriftung
+{
+   name={ISO},                                % Der Term
+   description={ist die internationale Vereinigung von Normungsorganisationen und erarbeitet internationale Normen in allen Bereichen mit Ausnahme der Elektrik und der Elektronik, für die die Internationale elektrotechnische Kommission (IEC) zuständig ist, und mit Ausnahme der Telekommunikation, für die die Internationale Fernmeldeunion (ITU) zuständig ist. Gemeinsam bilden diese drei Organisationen die WSC (World Standards Cooperation)},                      % Beschreibung
+   first={International Organization for Standardization (ISO)},
+   text={ISO},
+   parent=general
+} 
+
+%% Grundlagen PM
+\newglossaryentry{pm}{name=Projektmanagement\\,description={\nopostdesc}}
+
+\newglossaryentry{scrum}
+{
+        name=Scrum,
+        description={Framework, welches die Zusammenarbeit in Teams unterstützt. Aus Erfahrungen zu lernen, sich bei der Problembehebung selbst zu organisieren sowie ihre Erfolge und Niederlagen zu reflektieren, um sich kontinuierlich zu verbessern},
+        parent=pm
+}
+
+\newglossaryentry{epic}
+{
+        name=EPIC,
+        description={Größere Aufgabeneinheit, die in mehrere kleinere Aufgaben (z.B. Storys) unterteilt werden können},
+        plural={EPICs},
+        parent=pm
+}
+
+\newglossaryentry{user-story}
+{
+        name=User Story,
+        description={aus der Sicht eines Endnutzers formulierte kurze Anforderungen oder Anfragen},
+        plural={User Stories},
+        parent=pm
+}
+
+\newglossaryentry{sprint}
+{
+        name=Sprint,
+        description={ein kurzer, fest definierter Zeitraum, in dem ein Team ein bestimmtes Arbeitskontingent erledigt},
+        plural={Sprints},
+        parent=pm
+}
+
+\newglossaryentry{product-backlog}
+{
+        name=Product Backlog,
+        description={priorisierte Liste von Aufgaben für das Entwicklerteam},
+        parent=pm
+}
+
+\newglossaryentry{product-owner}
+{
+        name=Product Owner (PO),
+        description={ist für die Verwaltung des \Glspl{product-backlog} zuständig und trägt dafür die Rechenschaft},
+        parent=pm
+}
+
+% Grundlagen NLP
+\newglossaryentry{nlp}{name=Natürliche Sprachverarbeitung\\,description={\nopostdesc}}
+
+\newglossaryentry{crisp-dm}
+{
+        name=Cross-industry standard process for data mining (CRISP-DM),
+        description={Merkmalextraktion\\ist ein Prozess der Dimensionalitätsreduktion, bei dem ein anfänglicher Satz von Rohdaten zur Verarbeitung auf besser handhabbare Gruppen reduziert wird},
+        parent=nlp
+}
+
+
+\newglossaryentry{spacy}
 {
         name=spaCy,
-        description={Eine Open-Source-Softwarebibliothek für die erweiterte Verarbeitung natürlicher Sprache, die in den Programmiersprachen Python und Cython geschrieben ist.}
+        description={Eine Open-Source-Softwarebibliothek für die erweiterte Verarbeitung natürlicher Sprache, die in den Programmiersprachen Python und Cython geschrieben ist},
+        plural={SpaCy},
+        parent=nlp
 }
 
-\newglossaryentry{feature_extraction}
+\newglossaryentry{feature-extraction}
 {
-        name=Feature Extraction,
-        description={Is a mark up language specially suited for 
-scientific documents}
-}
-
-\newglossaryentry{nlp}
-{
-        name=NLP,
-        description={Mathematics is what mathematicians do}
+        name=Merkmalextraktion,
+        description={Merkmalextraktion ist ein Prozess der Dimensionalitätsreduktion, bei dem ein anfänglicher Satz von Rohdaten zur Verarbeitung auf besser handhabbare Gruppen reduziert wird},
+        parent=nlp
 }
 
 \newglossaryentry{text-mining}
 {
         name=Text-Mining,
-        description={A mathematical expression}
+        description={Algorithmus-basierte Analyseverfahren zur Entdeckung von Bedeutungsstrukturen aus unstrukturierten Textdaten},
+        parent=nlp
 }
+
+\newglossaryentry{tokenisierung}
+{
+        name=Tokenisierung,
+        description={},
+        parent=nlp
+}
+
+\newglossaryentry{bow}                              % Die Beschriftung
+{
+   name={Bag of Words},                                      % Der Term
+   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},                      % Beschreibung
+   first={Bag of Words (BoW)},           
+   text={BoW},
+        parent=nlp
+} 
+
+\newglossaryentry{pos}                              % Die Beschriftung
+{
+   name={Part-of-Speech},                                      % Der Term
+   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},                      % Beschreibung
+   first={Part-of-Speech (POS)},
+   text={POS},
+        parent=nlp
+} 

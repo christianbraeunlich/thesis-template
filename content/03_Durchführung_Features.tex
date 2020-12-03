@@ -1,0 +1,88 @@
+\chapterimage{media/headerLogo.png}
+\chapter{Identifizierung von Anforderungen}
+\label{cha:durchfuehrungfeature}
+
+\epigraph{Whether you are analyzing social media, feeds, HTML and PDF documents, or any other kinds of text, the first step involves converting the content to raw text.}{VISHAL DESHPANDE}
+
+\lipsum[3]
+
+\section{Datenbeschaffung}
+\label{sec:datenbeschaffung}
+
+\lipsum[3]
+
+\begin{savenotes}
+    \begin{table}[!ht]
+        \small
+        \centering
+        \begin{tabular}{llllll}
+        \hline
+        \#                      & Titel         & \# Anforderungen         & Beschaffenheit   & \# Seiten     \\ \hline
+        1                       & PH\_A01       & 175 & 1                & 18            \\
+        \rowcolor[HTML]{EFEFEF} 
+        2                       & PH\_A02 - Brettspiel       & 88 & 2                & 24            \\
+        3                       & PH\_A03 - Sportportal       & 255 & 3                & 51            \\
+        \rowcolor[HTML]{EFEFEF}
+        4                       & PH\_A04 - Handyverträge     & 32   & 3                & 23            \\
+        5                       & PH\_KTC01     & 131 & 3                & 34            \\
+        \rowcolor[HTML]{EFEFEF}
+        6                       & PH\_KTC02     & 33 & 2                & 16            \\   
+        \end{tabular}
+        \caption{Überblick über die Beschaffenheit der Pflichtenhefte}
+        \label{tab:pflichtenhefte}
+    \end{table}
+\end{savenotes}
+
+\section{Text-Extrahierung}
+\label{sec:text-extrahierung}
+
+\lipsum[3]
+
+\section{Text-Vorverarbeitung}
+\label{sec:text-vorverarbeitung}
+
+\lipsum[3]
+
+\section{Anwendung des SAFE-Ansatzes}
+\label{sec:pos-muster-analyse}
+
+\lipsum[3]
+
+\section{Optimierung des SAFE-Ansatzes}
+\label{optimierung}
+
+\lipsum[3]
+
+\begin{table}[!ht]
+    \centering
+    \begin{adjustbox}{width=0.95\columnwidth, center}
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{lll}
+        \hline
+        \textbf{\#} & \textbf{POS Muster}                                 & \textbf{POS-Tags Muster}\\ \hline
+        1  & Determinante Nomen Verb                    & DET-NOUN-VERB\\
+        \rowcolor[HTML]{EFEFEF} 
+        2  & Pronomen Verb - Adjektiv                   & PRON-VERB-{}-ADV\\
+        3  & Nomen Verb Adjektiv Verb                   & NOUN-VERB-ADJ-VERB\\
+        \rowcolor[HTML]{EFEFEF}
+        4  & Nomen Verb Adposition Nomen Verb           & NOUN-VERB-ADP-NOUN-VERB\\
+        5  & Nomen Adposition Determinante Nomen Verb   & NOUN-ADP-DET-NOUN-VERB\\
+        \rowcolor[HTML]{EFEFEF}
+        6  & Nomen Adposition Determinante Nomen Verb   & NOUN-ADP-DET-NOUN-VERB\\
+        7  & Adposition Determinante Nomen Verb         & ADP-DET-NOUN-VERB\\
+        \rowcolor[HTML]{EFEFEF}
+        8  & Adjektiv Verb Determinante Nomen Determinante & ADJ-VERB-DET-NOUN-DET\\
+        9  & Determinante Nomen Hilfsverb               & DET-NOUN-AUX\\
+        \rowcolor[HTML]{EFEFEF}
+        10 & Determinante Nomen Verb Nomen              & DET-NOUN-VERB-NOUN\\
+        11 & Determinante Nomen Verb Adposition         & DET-NOUN-VERB-ADP\\
+        \rowcolor[HTML]{EFEFEF}
+        12 & Determinante Nomen Verb Determinante       & DET-NOUN-VERB-DET\\
+        \end{tabular}
+    }
+    \end{adjustbox}
+    \caption{Überblick über die eigenen POS-Muster}
+    \label{tab:pos}
+\end{table}
+
+\lipsum[2]
