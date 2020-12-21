@@ -35,6 +35,10 @@
     <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/docker/image-size/otterwhisperer/thesis-template/latest.svg" alt="GitHub contributors">
     </a>
+    <a href="https://www.overleaf.com/latex/templates/thesis-template/vpcxgvrjgbgk" target="_blank">
+        <img src="https://img.shields.io/badge/-Overleaf-green.svg" alt="Overleaf Template">
+    </a>
+    
     <a>
         <img src="https://img.shields.io/badge/-template-blue.svg" alt="template">
     </a>
