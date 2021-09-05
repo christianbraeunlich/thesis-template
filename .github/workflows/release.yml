@@ -1,0 +1,39 @@
+name: Upload Artifact
+
+on:
+  release:
+    types: [created, published]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2      
+    - name: pdflatex main
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: main.tex
+        compiler: pdflatex
+        args: -interaction=nonstopmode -shell-escape
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: ${{ github.ref }}
+        body_path: CHANGELOG.md
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: upload artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: main.pdf
+        asset_name: main.pdf
+        asset_content_type: application/zip
