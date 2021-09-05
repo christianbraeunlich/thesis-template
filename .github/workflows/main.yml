@@ -25,21 +25,3 @@ jobs:
         root_file: main.tex
         compiler: pdflatex
         args: -interaction=nonstopmode -shell-escape
-    - name: bibtex main
-      uses: dante-ev/latex-action@latest
-      with:
-        root_file: main.aux
-        compiler: bibtex
-    - name: pdflatex main
-      uses: dante-ev/latex-action@latest
-      with:
-        root_file: main.tex
-        compiler: pdflatex
-        args: -interaction=nonstopmode -shell-escape
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag thesis-template:latest
