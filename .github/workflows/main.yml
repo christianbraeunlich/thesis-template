@@ -5,12 +5,10 @@ name: Build LaTeX document
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  release:
-    types: [published]
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
   setup-build-publish-deploy:
@@ -25,3 +23,9 @@ jobs:
         root_file: main.tex
         compiler: pdflatex
         args: -interaction=nonstopmode -shell-escape
+    - name: upload pdf as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: main.pdf
+        path: ${{github.workspace}}/main.pdf
+        retention-days: 14
