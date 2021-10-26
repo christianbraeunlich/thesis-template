@@ -22,9 +22,6 @@
     <a href="https://github.com/otterwhisperer/thesis-template" target="_blank">
         <img src="https://img.shields.io/github/downloads/otterwhisperer/thesis-template/total.svg" alt="GitHub downloads">
     </a>
-    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
-        <img src="https://img.shields.io/badge/-docker-brightgreen.svg?" alt="GitHub build status"> 
-    </a>
     <a href="https://github.com/otterwhisperer/thesis-template/commits/master" target="_blank">
         <img src="https://img.shields.io/github/commit-activity/y/otterwhisperer/thesis-template.svg" alt="GitHub commit activity">
     </a>
@@ -33,13 +30,6 @@
     </a>
     <a href="https://github.com/otterwhisperer/thesis-template/graphs/contributors" target="_blank">
         <img src="https://img.shields.io/github/contributors-anon/otterwhisperer/thesis-template.svg" alt="GitHub contributors">
-    </a>
-    </a>
-    <a href="https://hub.docker.com/repository/docker/otterwhisperer/thesis-template" target="_blank">
-        <img src="https://img.shields.io/docker/image-size/otterwhisperer/thesis-template/latest.svg" alt="GitHub contributors">
-    </a>
-    <a>
-        <img src="https://img.shields.io/badge/-template-blue.svg" alt="template">
     </a>
 </p>
 <br/>
@@ -55,12 +45,11 @@
   </tr>
 </table>
 
-> focus on what matters MOST . . .
-> dedicated to all clumsy otter's out there...
+> Personal thesis template written in LaTeX to focus on what matters most.
 
 ## :otter: Goal of this project
 
-> Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest
+> Create an easy to understand LaTeX-Template which can be used in a matter of hours to the fullest. Dedicated to all clumsy otter's out there.
 
 ## :page_facing_up: Guide
 
@@ -70,22 +59,36 @@ A simple guide to make sure you quickly understand how to use this template... L
 
     root
     ├── config
+    |   ├── 00_DemoPackages.tex
     |   ├── 00_Packages.tex
-    |   ├── 01_DocumentClass.tex
-    |   ├── 02_PageLayout.tex
-    |   ├── 03_PdfConfig.tex
-    |   ├── 04_TableOfContents.tex
-    │   └── 05_HeaderAndFooter.tex
+    |   ├── 01_UserInformations.tex
+    |   ├── 02_DocumentClass.tex
+    |   ├── 03_PageLayout.tex
+    |   ├── 04_PdfConfig.tex
+    |   ├── 06_ParagraphConfig.tex
+    │   ├── 07_ToC.tex
+    |   ├── 08_Bibliography.tex
+    |   ├── 09_ChapterStyle.tex
+    |   ├── 12_epigraphs.tex
+    |   ├── 050_HeaderAndFooter.tex
+    |   ├── 051_Header.tex
+    |   ├── 052_Footer.tex
+    |   └── 099_Appendix.tex
     ├── content
     |   ├── chapter1.tex    
     │   └── chapter2.tex
     ├── media
+    |   ├── ChapterImage.png 
     │   └── logo.png
     └── pages
         ├── 00_Titlepage.tex
         ├── 01_Vorwort.tex
-        ├── 02_Abstract.tex        
-        └── 03_Acknowledgement.tex    
+        ├── 02_Abstract.tex
+        ├── 03_Acknowledgement.tex
+        ├── 091_Glossary.tex
+        ├── 092_Acronym.tex
+        ├── 98_Affidavit.tex
+        └── 99_Appendix.tex    
 
 ### :books: Bibliography
 
@@ -112,10 +115,11 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ### Useful tools
 
-| TeX-Editor            |        Platform       | Difficulty        |
-| :---                  |         :---:         |              ---: |
-| `TeXstudio`           | Linux, Windows, macOS | easy              |
-| `Visual Studio Code`  | Linux, Windows, macOS | medium            |
+| TeX-Editor                                |        Platform       | Difficulty        |
+| :---                                      |         :---:         |              ---: |
+| [Overleaf](https://overleaf.com)          | Linux, Windows, macOS | easy              |
+| [TeXstudio](https://texstudio.org)        | Linux, Windows, macOS | medium            |
+| [VS Code](https://code.visualstudio.com)  | Linux, Windows, macOS | hard              |
 
 ## Acknowledgment
 
@@ -125,8 +129,8 @@ A simple guide to make sure you quickly understand how to use this template... L
 
 ## ❤️ Community and Contributions
 
-1. Fork it (<https://github.com/otterwhisperer/thesis-template/fork>)
+1. Fork it (<https://github.com/christianbraeunlich/thesis-template/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request (<https://github.com/OtterWhisperer/thesis-template/pulls>)
+5. Create a new Pull Request (<https://github.com/christianbraeunlich/thesis-template/pulls>)
