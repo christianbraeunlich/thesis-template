@@ -1,9 +1,5 @@
-# This is the LaTeX workflow
-
 name: Build LaTeX document
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ main, develop ]
@@ -11,21 +7,23 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2      
+      uses: actions/checkout@v2
+
     - name: pdflatex main
       uses: dante-ev/latex-action@latest
       with:
         root_file: main.tex
         compiler: pdflatex
         args: -interaction=nonstopmode -shell-escape
+
     - name: upload pdf as artifact
       uses: actions/upload-artifact@v2
       with:
-        name: main.pdf
+        name: main
         path: ${{github.workspace}}/main.pdf
         retention-days: 14
