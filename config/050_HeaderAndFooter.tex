@@ -4,10 +4,10 @@
 %
 % ____ Scrlayer-Scrpage-Package ____________________________
 \usepackage[
-	automark,		% Kapitelangaben in Kopfzeile automatisch erstellen
-	%headtopline,   % Trennlinie über Kopfzeile
-    headsepline,	% Trennlinie unter Kopfzeile
-	ilines		    % Trennlinie linksbündig ausrichten
+	automark,		% Create chapter information in header automatically
+	%headtopline,   % Separator line above header
+    headsepline,	% Separator line under header
+	ilines		    % Align separator left
 ]{scrlayer-scrpage}
 
 \clearscrheadfoot
@@ -28,7 +28,7 @@
 %\setheadsepline{.5pt}
 
 %%%
-%%% Kopf- und Fußzeile auch auf Kapitelanfangsseiten
+%%% Header and footer also on chapter start pages
 %\renewcommand*{\chapterpagestyle}{scrheadings}
 
 \include{config/051_Header}

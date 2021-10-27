@@ -29,7 +29,7 @@
 \large{\textbf{\textsc{\titlename}}}\\[3ex]
 
 % \LARGE{\textbf{\subtitlename}}\\[4ex]
-% \Large{im Studiengang \studienbereich}\\[6ex]
+% \Large{in the study course \studycourse}\\[6ex]
 
 \singlespacing
 
@@ -41,20 +41,30 @@
 
 \singlespacing
 
+\singlespacing
+
 \normalsize
-\begin{tabular}{z{5.4cm}p{6cm}}\\
- Matrikelnummer:    & \quad \matrikelnr\\[1.2ex]
- Studiengang:       & \quad \studiengang\\[1.2ex]
- Erstgutachter:     & \quad \erstgutachter\\[1.2ex]
- Zweitgutachter:    & \quad \zweitgutachter\\[1.2ex]
- Ausgabedatum:      & \quad \ausgabedatum\\[1.2ex]
+
+\renewcommand{\arraystretch}{0.5}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rll}
+Student number: &  & \quad \studentnumber\\[1.2ex]         \\
+Study Course:   &  & \quad \studycourse\\[1.2ex]  \\
+First examiner:               &  & \quad \firstexaminer\\[1.2ex]                  \\
+Second examiner:               &  & \quad \secondexaminer\\[1.2ex]                \\
+Date of issue:               &  &  \quad \dateofissue\\[1.2ex]           
 \end{tabular}
+\end{table}
+
+\renewcommand{\arraystretch}{1}
 
 \singlespacing
 
 \singlespacing
 
-vorgelegt am \abgabedatum \space zur Erlangung des akademischen Grades\\[1.2ex]
+submitted on \submissiondate \space to obtain the academic degree\\[1.2ex]
 \akademischergrad\\[1.2ex]
 
 \end{center}

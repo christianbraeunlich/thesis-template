@@ -6,13 +6,13 @@
 %   > Definition of global Parameters.
 %
 
-% Fußnoten
+% Footnotes
 \usepackage[
   perpage,            % default
-  %para,               % fortlaufend (sehr platzsparend! )
-  hang,               % bündig mit dem Rand
-  %side,               % setzt fußnoten an den Rand
-  flushmargin         % eng aneinander liegend (bündig)
+  %para,              % continuous (space-saving)
+  hang,               % flush with edge
+  %side,              % places footnotes in the margin
+  flushmargin         % close together (flush)
 ]{footmisc}
 
 % ____User-Informations_____________________
@@ -20,11 +20,11 @@
 %
 % ==========================================
 
-% ____ Umlaute _____________________________
-% 	Umlaute/Sonderzeichen wie äüöß direkt im Quelltext verwenden (CodePage).
-%		Erlaubt automatische Trennung von Worten mit Umlauten.
+% ____ Umlauts _____________________________
+% 	Umlauts/Use special characters like äüöß directly in the source code (CodePage).
+%		Allows automatic separation of words with umlauts.
 % ==========================================
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{microtype}              % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -34,12 +34,12 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-%\usepackage{lmodern}                         % Latin Modern
-%\usepackage{ae} % "schöneres" ß
-\usepackage{textcomp} % Euro-Zeichen etc.
+%\usepackage{lmodern}               % Latin Modern
+%\usepackage{ae}                    % "nicer" ß
+\usepackage{textcomp}               % Euro symbol etc.
 
-% Anpassung an Landessprache -----------------------------------------------
-% 	Verwendet globale Option german siehe \documentclass
+% Adaptation to local language -----------------------------------------------
+% 	Uses global option german see \documentclass
 % --------------------------------------------------------------------------
 %
 % ______________ Packages ____________________________________
@@ -54,34 +54,34 @@
 % Quotation Package
 \usepackage{csquotes}
 
-% Bessere Unterstreichungen ---------------------------------------------
+% Better underlining ---------------------------------------------
 \usepackage[normalem]{ulem}
 
-% Grafiken -----------------------------------------------------------------
-% 	Einbinden von EPS-Grafiken [draft oder final]
-% 	Option [draft] bindet Bilder nicht ein - auch globale Option
+% Graphics -----------------------------------------------------------------
+% 	Embed EPS graphics [draft or final]
+% 	Option [draft] does not include images - also global option
 % --------------------------------------------------------------------------
 \usepackage[dvips, final]{graphicx}
-\graphicspath{{media/}} % Dort liegen die Bilder des Dokuments
+\graphicspath{{media/}}                               % There are the images of the document
 
-% Befehle aus AMSTeX für mathematische Symbole z.B. \boldsymbol \mathbb ----
+% Commands from AMSTeX for mathematical symbols e.g. \boldsymbol \mathbb ----
 \usepackage{amsmath, amsfonts}
 
 %
-% Zeilenumbruch bei Bildbeschreibungen
+% Line break for image descriptions
 %
 \setcapindent{1em}
 
-% Für Index-Ausgabe; \printindex -------------------------------------------
+% For index output; \print index -------------------------------------------
 \usepackage{makeidx}
 
-% Symbolverzeichnis --------------------------------------------------------
-% 	Symbolverzeichnisse bequem erstellen, beruht auf MakeIndex.
+% Symbol directory --------------------------------------------------------
+% 	Create symbol directories conveniently is based on MakeIndex.
 % 		makeindex.exe %Name%.nlo -s nomencl.ist -o %Name%.nls
-% 	erzeugt dann das Verzeichnis. Dieser Befehl kann z.B. im TeXnicCenter
-%		als Postprozessor eingetragen werden, damit er nicht ständig manuell
-%		ausgeführt werden muss.
-%		Die Definitionen sind ausgegliedert in die Datei Abkuerzungen.tex.
+% 	then creates the directory. This command can be used e.g. in TeXnicCenter
+%		be entered as a postprocessor, so that it is not constantly manually
+%		must be executed.
+%		The definitions are separated into the file Abbreviations.tex.
 % --------------------------------------------------------------------------
 \usepackage[intoc]{nomencl}
   \let\abbrev\nomenclature
@@ -90,10 +90,10 @@
   \renewcommand{\nomlabel}[1]{#1 \dotfill}
   \setlength{\nomitemsep}{-\parsep}
 
-% zum Umfließen von Bildern ---------------------------------------------------------
+% to flow around images ---------------------------------------------------------
 \usepackage[vflt]{floatflt}
 
-% Zum Einbinden von Programmcode --------------------------------------------
+% For embedding program code --------------------------------------------
 \usepackage{listings}
 \usepackage[table, xcdraw, x11names]{xcolor}
 \definecolor{hellgelb}{rgb}{1,1,0.9}
@@ -122,33 +122,33 @@
 %    captionpos=b%
 }
 
-% Lange URLs umbrechen etc. -------------------------------------------------
+% Wrap long URLs etc. -------------------------------------------------
 \usepackage[hyphens]{url}
 
-% Paket zum sauberen Einbauen von externen PDF-Dateien -----------------
+% Package for clean embedding of external PDF files -----------------
 \usepackage[final]{pdfpages}
 
-% Zum fortlaufenden Durchnummerieren der Fußnoten ---------------------------
+% To number the footnotes consecutively ---------------------------
 \usepackage{chngcntr}
 
-% Beschriftung von Tabellen und Bildern ändern ----------------------------------------------------------
+% Change labeling of tables and images ----------------------------------------------------------
 \addto\captionsngerman{
-	\renewcommand{\figurename}{Abb.}
+	\renewcommand{\figurename}{Fig.}
 	\renewcommand{\tablename}{Tab.}
 }
 
-% Rotation von Elementen -------------------------------------------------------
+% Rotation of elements -------------------------------------------------------
 \usepackage{rotating}
 
-% für lange Tabellen
+% for long tables
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{ragged2e}
 \usepackage{lscape}
 
-% Spaltendefinition rechtsbündig mit definierter Breite
+% Column definition right-aligned with defined width
 \newcolumntype{z}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
 
-% Formatierung von Listen ändern
+% Change formatting of lists
 \usepackage{paralist}
 % \setdefaultleftmargin{2.5em}{2.2em}{1.87em}{1.7em}{1em}{1em}

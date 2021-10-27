@@ -16,47 +16,47 @@
 %
 % ____ Template-Standard ___________________________________
 %
-%\newglossaryentry{matrix}                          % Die Beschriftung
+%\newglossaryentry{matrix}
 %{
-%   name={matrix},                                  % Der Term
-%   description={a rectangular table of elements},  % Beschreibung
-%   plural={matrices}                               % Plural
+%   name={matrix},
+%   description={a rectangular table of elements},
+%   plural={matrices}
 %}
 
 %
 % ____ Template-Abkürzung __________________________________
 %
-%\newglossaryentry{svm}                             % Die Beschriftung
+%\newglossaryentry{svm}
 %{
-%   name={SVM},                                     % Der Term
-%   type=symbolslist,                              % glossary type
-%   description={support vector machine},           % Beschreibung
-%   first={support vector machine (SVM)},           
+%   name={SVM},
+%   type=symbolslist,
+%   description={support vector machine},
+%   first={support vector machine (SVM)},
 %   firstplural={support vector machines (SVMs)},
 %   text={SVM},
 %   plural={SVMs},
 %   sort={Text}
 %} 
 
-% \newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis} % Symbolverzeichnis erstellen
+% \newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}   % Create symbol directory
 % \newglossary*{pm}{PM}
-\renewcommand*{\glspostdescription}{}               % Den Punkt am Ende jeder Beschreibung deaktivieren
+\renewcommand*{\glspostdescription}{}                           % Disable the dot at the end of each description
 
 \renewcommand{\glstreeitem}{%
  \parindent0pt\par\hangindent40pt
  \everypar{\parindent50pt\hangindent40pt}}
 
 
-\makeglossaries                                     % Glossar-Befehle anschalten
+\makeglossaries                                                 % Switch on glossary commands
 
-%%%% Eigenen Stil für das Formelverzeichnis definieren
+%%%% Define your own style for the formula directory
 % \newglossarystyle{MyStyle}{
 %   \glossarystyle{long3colheader}
 %   \renewenvironment{theglossary}
 %   {\begin{longtable}{lp{2cm}p{\glsdescwidth}}}
 %     {\end{longtable}}
 %   \renewcommand*{\glossaryheader}{\textbf{Symbol} & \textbf{Einheit} &
-%     \textbf{Beschreibung}\\[3ex]\endhead}% ÄNDERUNG: Kopf auf jeder Seite wiederholen
+%     \textbf{Beschreibung}\\[3ex]\endhead}% CHANGE: Repeat head on each side
 %   \renewcommand*{\glossaryentryfield}[5]{%
 %     \glsentryitem{##1}\glstarget{##1}{##2} & ##4 & ##3  \\[1ex]}% 
 % }
@@ -64,9 +64,7 @@
 % ____ Glossar _____________________________________________
 %
 
-%% Allgemeines
-
-\newglossaryentry{general}{name=Allgemeines\\,description={\nopostdesc}}
+\newglossaryentry{general}{name=General\\,description={\nopostdesc}}
 
 \newglossaryentry{API} 
 {
@@ -77,16 +75,15 @@
     parent=general
 }
 
-\newglossaryentry{iso}                              % Die Beschriftung
+\newglossaryentry{iso}
 {
-   name={ISO},                                % Der Term
-   description={ist die internationale Vereinigung von Normungsorganisationen und erarbeitet internationale Normen in allen Bereichen mit Ausnahme der Elektrik und der Elektronik, für die die Internationale elektrotechnische Kommission (IEC) zuständig ist, und mit Ausnahme der Telekommunikation, für die die Internationale Fernmeldeunion (ITU) zuständig ist. Gemeinsam bilden diese drei Organisationen die WSC (World Standards Cooperation)},                      % Beschreibung
+   name={ISO},
+   description={ist die internationale Vereinigung von Normungsorganisationen und erarbeitet internationale Normen in allen Bereichen mit Ausnahme der Elektrik und der Elektronik, für die die Internationale elektrotechnische Kommission (IEC) zuständig ist, und mit Ausnahme der Telekommunikation, für die die Internationale Fernmeldeunion (ITU) zuständig ist. Gemeinsam bilden diese drei Organisationen die WSC (World Standards Cooperation)},
    first={International Organization for Standardization (ISO)},
    text={ISO},
    parent=general
 } 
 
-%% Grundlagen PM
 \newglossaryentry{pm}{name=Projektmanagement\\,description={\nopostdesc}}
 
 \newglossaryentry{scrum}
@@ -174,19 +171,19 @@
         parent=nlp
 }
 
-\newglossaryentry{bow}                              % Die Beschriftung
+\newglossaryentry{bow}
 {
-   name={Bag of Words},                                      % Der Term
-   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},                      % Beschreibung
+   name={Bag of Words},
+   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},
    first={Bag of Words (BoW)},           
    text={BoW},
         parent=nlp
 } 
 
-\newglossaryentry{pos}                              % Die Beschriftung
+\newglossaryentry{pos}
 {
-   name={Part-of-Speech},                                      % Der Term
-   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},                      % Beschreibung
+   name={Part-of-Speech},
+   description={Modell, welches die Anzahl von Wörtern in Dokumenten zählt},
    first={Part-of-Speech (POS)},
    text={POS},
         parent=nlp

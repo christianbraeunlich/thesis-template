@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-10-27
+### Changed
+- Translated everything into English
+- Table on the titlepage
+- Refactor some files
+
 ## [0.2.0] - 2021-10-26
 ### Added
 - New Images
